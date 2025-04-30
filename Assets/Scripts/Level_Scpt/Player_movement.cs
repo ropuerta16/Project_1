@@ -5,21 +5,16 @@ public class Player_movement : MonoBehaviour
     public float force = 1f;
     Rigidbody2D rigidbody;
 
-    GameObject Ckeck_ground;
+    Check_ground Check_ground;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && Ckeck_ground.IsGrounded)
+        if (Input.GetKey(KeyCode.W) && Check_ground.IsGrounded)
         {
-                Vector2 movement = new Vector2(0, 10);
+            Vector2 movement = new Vector2(0, 10);
 
-                rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
+            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
+            Check_ground.IsGrounded = false;
         }
 
         if (Input.GetKey(KeyCode.A))
