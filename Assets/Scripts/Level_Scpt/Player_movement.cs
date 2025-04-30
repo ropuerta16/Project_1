@@ -3,9 +3,9 @@ using UnityEngine;
 public class Player_movement : MonoBehaviour
 {
     public float force = 1f;
-    Rigidbody2D rigidbody;
+    public Rigidbody2D rigidbody;
 
-    Check_ground Check_ground;
+    public Check_ground Check_ground;
 
     void Update()
     {
@@ -14,21 +14,22 @@ public class Player_movement : MonoBehaviour
             Vector2 movement = new Vector2(0, 10);
 
             rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
+
             Check_ground.IsGrounded = false;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            Vector2 movement = new Vector2(-1, 0);
+            Vector2 movement = new Vector2(-10, 0);
 
-            rigidbody.AddForce(movement * (force * 250) * Time.deltaTime);
+            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Vector2 movement = new Vector2(1, 0);
+            Vector2 movement = new Vector2(10, 0);
 
-            rigidbody.AddForce(movement * (force * 250) * Time.deltaTime);
+            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
         }
 
         /*
