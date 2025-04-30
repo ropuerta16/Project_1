@@ -3,42 +3,25 @@ using UnityEngine;
 public class Player_movement : MonoBehaviour
 {
     public float force = 1f;
-    public Rigidbody2D rigidbody;
-
     public Check_ground Check_ground;
-
+    private void Start()
+    {
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && Check_ground.IsGrounded)
-        {
-            Vector2 movement = new Vector2(0, 10);
-
-            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
-
-            Check_ground.IsGrounded = false;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            Vector2 movement = new Vector2(-10, 0);
-
-            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
-        }
-
         if (Input.GetKey(KeyCode.D))
         {
-            Vector2 movement = new Vector2(10, 0);
-
-            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
+            transform.position += Vector3.right * force * Time.deltaTime;
         }
-
-        /*
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.A))
         {
-            Vector2 movement = new Vector2(0, -1);
-
-            rigidbody.AddForce(movement * (force * 1000) * Time.deltaTime);
-        }*/
+            transform.position += Vector3.left * force * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.position += Vector3.up * force * Time.deltaTime;
+        }
     }
 }
 
