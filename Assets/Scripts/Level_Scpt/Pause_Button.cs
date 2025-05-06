@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class Pause_Button : MonoBehaviour
 {
-   GameObject PanelMenu;
+   public GameObject Panel_Menu;
+   public GameObject Panel_Background;
 
     public void OnClick ()
     {
-        PanelMenu.SetActive (true);
+        Panel_Menu.SetActive (true);
+        Panel_Background.SetActive (true);
     }
 }

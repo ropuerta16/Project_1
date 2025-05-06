@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2(0.5f,0.5f);
     public LayerMask groundLayer;
 
+    private Collider2D currentGroundCollider2D;
 
     // Update is called once per frame
     void Update()
@@ -44,8 +45,15 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        if(Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer))
-        {  return true; } return false;
+        Collider2D GroundCollider = Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer);
+        
+        if(GroundCollider) 
+        {
+            currentGroundCollider2D = GroundCollider;
+            return true; 
+        } 
+        
+        return false;
     }
     private void OnDrawGizmosSelected()
     {
