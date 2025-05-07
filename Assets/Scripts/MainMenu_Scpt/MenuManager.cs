@@ -9,11 +9,16 @@ public class MenuManager : MonoBehaviour
     { Application.Quit(); }
 
     public void Play_Click()
-    { SceneManager.LoadScene(1); }
+    { LoadScene("Tutorial"); }
 
     public void Option_Click()
     { Options_Panel.SetActive(true); }
 
     public void Back_Click()
     { Options_Panel.SetActive(false); }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }
