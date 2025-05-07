@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu_Button : MonoBehaviour
 {
-    public GameObject Exit_Button;
-    public GameObject Resume_Button;
     public GameObject Panel_Menu;
     public GameObject Panel_Background;
 
@@ -19,4 +17,7 @@ public class PauseMenu_Button : MonoBehaviour
         Panel_Menu.SetActive(false);
         Panel_Background.SetActive(true);
     }
+
+    public void Restart_Click()
+    { SceneManager.LoadScene(1); }
 }
