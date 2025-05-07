@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Button_Manager : MonoBehaviour
@@ -6,6 +7,10 @@ public class Button_Manager : MonoBehaviour
     public GameObject Panel_Menu;
     public GameObject Panel_Background;
 
+    private void Update()
+    {
+        
+    }
     public void Pause_Click()
     {
         Panel_Menu.SetActive(true);
