@@ -11,10 +11,13 @@ public class Button_Manager : MonoBehaviour
     {
         
     }
+
+
     public void Pause_Click()
     {
         Panel_Menu.SetActive(true);
         Panel_Background.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Exit_Click()
@@ -25,7 +28,8 @@ public class Button_Manager : MonoBehaviour
     public void Resume_Click()
     {
         Panel_Menu.SetActive(false);
-        Panel_Background.SetActive(true);
+        Panel_Background.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Restart_Click()

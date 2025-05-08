@@ -3045,7 +3045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276094d36b9499c4fa07683cde1b67ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   rigidbody: {fileID: 593548039}
   jumpforce: 20
   groundCheckPos: {fileID: 1854229460}
@@ -3053,6 +3053,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  Panel_Menu: {fileID: 412326430}
+  Panel_Background: {fileID: 317154930}
 --- !u!114 &593548037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3150,6 +3152,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cf1292b4-df2f-4402-b315-982af01b4d4e
+    m_ActionName: 'Player/Escape[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
