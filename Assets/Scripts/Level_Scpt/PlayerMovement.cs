@@ -6,7 +6,7 @@ using UnityEngine.Timeline;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
     public float jumpforce = 10f;
     float HorizontalMovement;
     public Transform groundCheckPos;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        rigidbody.linearVelocity = new Vector2 (HorizontalMovement * speed, rigidbody.linearVelocity.y);
+        rb.linearVelocity = new Vector2 (HorizontalMovement * speed, rb.linearVelocity.y);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -41,12 +41,12 @@ public class PlayerMovement : MonoBehaviour
             if (context.performed)
             {
                 //Hold = full height
-                rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, jumpforce);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpforce);
             }
             else if (context.canceled)
             {
                 //Press = low jump
-                rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, rigidbody.linearVelocity.y * 0.5f);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             }
         }
         
