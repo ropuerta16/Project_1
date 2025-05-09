@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sound_manager : MonoBehaviour
 {
-    public SpriteRenderer spriterenderer;
+    public Image spriterenderer;
+
     public Sprite newSprite;
     public Sprite oldSprite;
     private bool isUnMute;
@@ -11,11 +13,14 @@ public class Sound_manager : MonoBehaviour
     {
         isUnMute = true;
     }
-    private void MuteClick()
+
+    public void MuteClick()
     {
         if (isUnMute)
         { AudioListener.volume = 1.0f; spriterenderer.sprite = newSprite; isUnMute = false; }
         else
         { AudioListener.volume = 0.0f; spriterenderer.sprite = oldSprite; isUnMute = true; }
     }
+
+
 }
