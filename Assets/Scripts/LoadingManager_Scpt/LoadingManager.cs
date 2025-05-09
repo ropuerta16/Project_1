@@ -1,22 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LoadingManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(ExecuteAfterDelay(5f)); 
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ExecuteAfterDelay(float delay)
     {
-
-    }
-
-    private void Timer()
-    {
-
-        
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Tutorial", LoadSceneMode.Additive);
     }
 }
