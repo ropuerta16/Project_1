@@ -6,6 +6,7 @@ public class LoadingManager : MonoBehaviour
 {
     void Start()
     {
+
         StartCoroutine(ExecuteAfterDelay(5f)); 
     }
 
