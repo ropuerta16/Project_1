@@ -151,6 +151,7 @@ RectTransform:
   m_Children:
   - {fileID: 2145580345}
   - {fileID: 1241073035}
+  - {fileID: 622439840}
   - {fileID: 1132252536}
   - {fileID: 662704106}
   m_Father: {fileID: 942450894}
@@ -551,7 +552,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -619,7 +620,7 @@ GameObject:
   - component: {fileID: 622439842}
   - component: {fileID: 622439841}
   m_Layer: 5
-  m_Name: Mute
+  m_Name: Mute_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,11 +638,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1132252536}
+  m_Father: {fileID: 4688025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.89996, y: -4.5}
+  m_AnchoredPosition: {x: -219.99997, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622439841
@@ -1595,7 +1596,7 @@ GameObject:
   - component: {fileID: 1132252538}
   - component: {fileID: 1132252537}
   m_Layer: 5
-  m_Name: UnMuted
+  m_Name: UnMuted_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,8 +1613,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 622439840}
+  m_Children: []
   m_Father: {fileID: 4688025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2231,8 +2231,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1123204513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.1, y: 0}
+  m_AnchorMax: {x: 0.1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2307,7 +2307,7 @@ RectTransform:
   m_Father: {fileID: 718535825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2645,7 +2645,7 @@ GameObject:
   - component: {fileID: 2145580347}
   - component: {fileID: 2145580346}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: Sound_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

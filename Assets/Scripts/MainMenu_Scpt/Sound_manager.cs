@@ -12,6 +12,7 @@ public class Sound_manager : MonoBehaviour
     public Slider sliderVolume;
     public AudioSource BackgroundAudio;
 
+    public static float sliderValue;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class Sound_manager : MonoBehaviour
     {
         if (isUnMute)
         { BackgroundAudio.volume = sliderVolume.value; }
+        sliderValue = sliderVolume.value;
     }
 
     public void MuteClick()
