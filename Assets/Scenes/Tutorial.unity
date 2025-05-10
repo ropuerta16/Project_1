@@ -2772,7 +2772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  rigidbody: {fileID: 593548039}
+  rb: {fileID: 593548039}
   jumpforce: 20
   groundCheckPos: {fileID: 1854229460}
   groundCheckSize: {x: 1.04, y: 0.1}

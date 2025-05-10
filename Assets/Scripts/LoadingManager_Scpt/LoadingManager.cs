@@ -4,6 +4,7 @@ using System.Collections;
 
 public class LoadingManager : MonoBehaviour
 {
+    public static string newScene;
     void Start()
     {
 
@@ -13,6 +14,6 @@ public class LoadingManager : MonoBehaviour
     IEnumerator ExecuteAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Tutorial", LoadSceneMode.Additive);
+        SceneManager.LoadScene(newScene);
     }
 }
