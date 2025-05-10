@@ -9,18 +9,27 @@ public class Sound_manager : MonoBehaviour
     public Sprite oldSprite;
     private bool isUnMute;
 
+    public Slider sliderVolume;
+    public AudioSource BackgroundAudio;
+
+
     private void Awake()
     {
         isUnMute = true;
     }
+    void Update()
+    {
+        if (isUnMute)
+        { BackgroundAudio.volume = sliderVolume.value; }
+    }
 
     public void MuteClick()
     {
-        if (isUnMute)
-        { AudioListener.volume = 1.0f; spriterenderer.sprite = newSprite; isUnMute = false; }
+        if (!isUnMute)
+        { BackgroundAudio.volume = 1.0f; spriterenderer.sprite = newSprite; isUnMute = true; }
         else
-        { AudioListener.volume = 0.0f; spriterenderer.sprite = oldSprite; isUnMute = true; }
+        { BackgroundAudio.volume = 0.0f; spriterenderer.sprite = oldSprite; isUnMute = false; }
     }
 
-
+    
 }
