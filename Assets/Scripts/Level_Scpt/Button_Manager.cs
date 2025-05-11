@@ -31,18 +31,18 @@ public class Button_Manager : MonoBehaviour
     }
 
     public void Restart_Click()
-    { LoadScene("Tutorial"); }
+    { LoadScene("Tutorial"); Time.timeScale = 1; }
 
     public void Victory_Click()
     {
-        LoadScene("LoadScene(\"Level_1\");");
+        //("LoadScene("Level_1");
+        LoadScene("MainMenu");
     }
 
     public void Option_click()
-    { 
-        Panel_Menu.SetActive(false);
-        Panel_Options.SetActive(true);
-    }
+    { Panel_Menu.SetActive(false); Panel_Options.SetActive(true); }
+    public void Back_Click()
+    { Panel_Options.SetActive(false); Panel_Menu.SetActive(true); }
 
     public void LoadScene(string sceneName)
     {
