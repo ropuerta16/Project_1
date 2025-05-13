@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool ActivePanel;
 
+    public GameObject Bullet;
+    public GameObject BulletSpawner;
     void Awake()
     {
         ActivePanel = false;
@@ -68,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
             Time.timeScale = 1;
             ActivePanel = false;
         }
+    }
+
+    public void Shoot(InputAction.CallbackContext context)
+    {
+        Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
     }
     private bool isGrounded()
     {
