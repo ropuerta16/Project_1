@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
@@ -22,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject Bullet;
     public GameObject BulletSpawner;
+
+    private float CoolDown = 0.5f;
+
+    public float Health = 100;
     void Awake()
     {
         ActivePanel = false;
@@ -29,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = new Vector2 (HorizontalMovement * speed, rb.linearVelocity.y);
+
+        CoolDown -= Time.deltaTime;
+
+        if (Health <= 0)
+        { Destroy(gameObject); }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -74,8 +82,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
-
+        if (CoolDown <= 0)
+        { Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation); CoolDown = 0.5f; }
     }
     private bool isGrounded()
     {
@@ -93,5 +101,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.white;
         Gizmos.DrawCube(groundCheckPos.position,groundCheckSize);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        { Health -= 10; }
     }
 }
