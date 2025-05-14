@@ -3295,8 +3295,8 @@ MonoBehaviour:
     m_Bits: 8
   Panel_Menu: {fileID: 412326430}
   Panel_Background: {fileID: 317154930}
-  Bullet: {fileID: 0}
-  BulletSpawner: {fileID: 0}
+  Bullet: {fileID: 2995952195955578681, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
+  BulletSpawner: {fileID: 70947568}
 --- !u!114 &593548037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3410,6 +3410,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cf1292b4-df2f-4402-b315-982af01b4d4e
     m_ActionName: 'Player/Escape[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 593548036}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 28099426-5cc1-4ad2-b8bb-b3c274cd9d12
+    m_ActionName: 'Player/Shoot[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -3558,6 +3574,7 @@ Transform:
   m_Children:
   - {fileID: 1854229460}
   - {fileID: 70947569}
+  - {fileID: 1114909263}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &615524829
@@ -5747,6 +5764,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067026878}
   m_CullTransparentMesh: 1
+--- !u!1 &1114909262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1114909263}
+  m_Layer: 0
+  m_Name: CamFollower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1114909263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114909262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 593548041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126346977
 GameObject:
   m_ObjectHideFlags: 0
@@ -8222,7 +8270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1691656884}
-  Player: {fileID: 593548041}
+  CamFollower: {fileID: 1114909263}
   speed: 0.07
 --- !u!1 &1697630247
 GameObject:

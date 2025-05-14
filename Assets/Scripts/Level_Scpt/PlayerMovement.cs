@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
     public void Shoot(InputAction.CallbackContext context)
     {
         Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
+
     }
     private bool isGrounded()
     {
