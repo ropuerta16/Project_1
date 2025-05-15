@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class Button_Manager : MonoBehaviour
 {
     public GameObject Panel_Menu;
-    public GameObject Panel_Background;
     public GameObject Panel_Options;
     public GameObject Pause_Button;
     public GameObject Victory_Panel;
@@ -38,7 +37,6 @@ public class Button_Manager : MonoBehaviour
     public void Pause_Click()
     {
         Panel_Menu.SetActive(true);
-        Panel_Background.SetActive(true);
         Pause_Button.SetActive(false);
         Time.timeScale = 0;
     }
@@ -51,7 +49,6 @@ public class Button_Manager : MonoBehaviour
     public void Resume_Click()
     {
         Panel_Menu.SetActive(false);
-        Panel_Background.SetActive(false);
         Pause_Button.SetActive(true);
         Time.timeScale = 1;
     }
