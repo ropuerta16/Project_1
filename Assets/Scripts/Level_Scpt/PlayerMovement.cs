@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
     private float CoolDown = 0.5f;
 
     public float Health = 100;
+
+    public SpriteRenderer spriterenderer;
+
+
     void Awake()
     {
         ActivePanel = false;
@@ -36,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         CoolDown -= Time.deltaTime;
 
         if (Health <= 0)
-        { Destroy(gameObject); }
+        { /*Destroy(gameObject); Destroy(spriterenderer.sprite);*/ }
     }
 
     public void Move(InputAction.CallbackContext context)

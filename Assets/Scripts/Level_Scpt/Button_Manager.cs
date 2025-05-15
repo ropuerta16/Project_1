@@ -8,6 +8,32 @@ public class Button_Manager : MonoBehaviour
     public GameObject Panel_Background;
     public GameObject Panel_Options;
     public GameObject Pause_Button;
+    public GameObject Victory_Panel;
+
+    public PlayerMovement Player;
+    public GameObject Panel_GameOver;
+
+    private void Update()
+    {
+        if (Player.Health <= 0)
+        {
+            GamneOver();
+        }
+    }
+
+    public void GamneOver()
+    {
+        Panel_GameOver.SetActive(true);
+        Pause_Button.SetActive(false);
+        Time.timeScale = 0;
+    }
+
+    public void Victory()
+    {
+        Victory_Panel.SetActive(true);
+        Pause_Button.SetActive(false);
+        Time.timeScale = 0;
+    }
 
     public void Pause_Click()
     {
