@@ -4560,7 +4560,7 @@ MonoBehaviour:
   Health: 100
   CoolDown: 0.5
   Bullet: {fileID: 2995952195955578681, guid: ca7d1cfd9a4b02c43a58d48584d4b11c, type: 3}
-  Raydistance: {x: -15, y: 0}
+  distance: 15
   Raypos: {fileID: 1170869903}
 --- !u!1 &837725863
 GameObject:

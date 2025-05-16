@@ -7,7 +7,8 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject Bullet;
 
-    public Vector2 Raydistance = new Vector2(50, 0);
+    private Vector2 Raydistance = new Vector2(-1, 0);
+    public float distance;
     public GameObject Raypos;
     private void Update()
     {
@@ -16,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
         if (Health <= 0)
         { Destroy(gameObject); }
 
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(Raypos.transform.position.x, Raypos.transform.position.y), Raydistance);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(Raypos.transform.position.x, Raypos.transform.position.y), Raydistance, distance);
 
 #if UNITY_EDITOR
         Debug.DrawRay(new Vector2(Raypos.transform.position.x, Raypos.transform.position.y), Raydistance);
