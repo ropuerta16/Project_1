@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     public GameObject Panel_Menu;
-    public GameObject Panel_Background;
 
     private Collider2D currentGroundCollider2D;
 
@@ -25,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float CoolDown = 0.5f;
 
-    public float Health = 100;
+    public float Health;
 
     public SpriteRenderer spriterenderer;
 
@@ -33,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         ActivePanel = false;
+        Health = 100;
     }
     void Update()
     {
@@ -72,14 +72,12 @@ public class PlayerMovement : MonoBehaviour
         if(!ActivePanel)
         {
             Panel_Menu.SetActive(true);
-            Panel_Background.SetActive(true);
             Time.timeScale = 0;
             ActivePanel = true;
         }
         else if (ActivePanel)
         {
             Panel_Menu.SetActive(false);
-            Panel_Background.SetActive(false);
             Time.timeScale = 1;
             ActivePanel = false;
         }

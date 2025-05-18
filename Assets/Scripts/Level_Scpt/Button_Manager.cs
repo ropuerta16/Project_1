@@ -12,6 +12,11 @@ public class Button_Manager : MonoBehaviour
     public PlayerMovement Player;
     public GameObject Panel_GameOver;
 
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Player.Health <= 0)
@@ -54,12 +59,19 @@ public class Button_Manager : MonoBehaviour
     }
 
     public void Restart_Click()
-    { LoadScene("Tutorial"); Time.timeScale = 1; }
+    {
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        { LoadScene("Tutorial"); }
+        else if (SceneManager.GetActiveScene().name == "Level_1")
+        { LoadScene("Level_1"); }
+        else if(SceneManager.GetActiveScene().name == "Level_2")
+        { LoadScene("Level_2"); }
+    }
 
     public void Victory_Click()
     {
-        //("LoadScene("Level_1");
-        LoadScene("MainMenu");
+        LoadScene("Level_1");
+        //LoadScene("MainMenu");
     }
 
     public void Option_click()
