@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float Health = 100;
-    public float CoolDown = 0.5f;
+    public float CoolDown = 1f;
 
     public GameObject Bullet;
 

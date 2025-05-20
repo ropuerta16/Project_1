@@ -19,29 +19,23 @@ public class PlayerMovement : MonoBehaviour
 
     private bool ActivePanel;
 
-    public GameObject Bullet;
-    public GameObject BulletSpawner;
+    public Player_Prefab Player_Prefab;
 
-    private float CoolDown = 0.5f;
+    public Button_Manager GameOver;
 
     public float Health;
-
-    public SpriteRenderer spriterenderer;
-
 
     void Awake()
     {
         ActivePanel = false;
-        Health = 100;
     }
     void Update()
     {
         rb.linearVelocity = new Vector2 (HorizontalMovement * speed, rb.linearVelocity.y);
 
-        CoolDown -= Time.deltaTime;
 
         if (Health <= 0)
-        { /*Destroy(gameObject); Destroy(spriterenderer.sprite);*/ }
+        { GameOver.GamneOver(); }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -83,11 +77,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Shoot(InputAction.CallbackContext context)
-    {
-        if (CoolDown <= 0)
-        { Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation); CoolDown = 0.5f; }
-    }
+    
     private bool isGrounded()
     {
         Collider2D GroundCollider = Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer);

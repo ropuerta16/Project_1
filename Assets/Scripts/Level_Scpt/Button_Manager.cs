@@ -9,20 +9,12 @@ public class Button_Manager : MonoBehaviour
     public GameObject Pause_Button;
     public GameObject Victory_Panel;
 
-    public PlayerMovement Player;
     public GameObject Panel_GameOver;
 
 
     private void Awake()
     {
         Time.timeScale = 1;
-    }
-    private void Update()
-    {
-        if (Player.Health <= 0)
-        {
-            GamneOver();
-        }
     }
 
     public void GamneOver()
