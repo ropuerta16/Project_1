@@ -1,7 +1,7 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,14 +14,17 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     public GameObject Panel_Menu;
-    public GameObject Panel_Background;
 
     private Collider2D currentGroundCollider2D;
 
     private bool ActivePanel;
 
-    public GameObject Bullet;
-    public GameObject BulletSpawner;
+    public Player_Prefab Player_Prefab;
+
+    public Button_Manager GameOver;
+
+    public float Health;
+
     void Awake()
     {
         ActivePanel = false;
@@ -29,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = new Vector2 (HorizontalMovement * speed, rb.linearVelocity.y);
+
+
+        if (Health <= 0)
+        { GameOver.GamneOver(); }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -59,23 +66,18 @@ public class PlayerMovement : MonoBehaviour
         if(!ActivePanel)
         {
             Panel_Menu.SetActive(true);
-            Panel_Background.SetActive(true);
             Time.timeScale = 0;
             ActivePanel = true;
         }
         else if (ActivePanel)
         {
             Panel_Menu.SetActive(false);
-            Panel_Background.SetActive(false);
             Time.timeScale = 1;
             ActivePanel = false;
         }
     }
 
-    public void Shoot(InputAction.CallbackContext context)
-    {
-        Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
-    }
+    
     private bool isGrounded()
     {
         Collider2D GroundCollider = Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer);
@@ -92,5 +94,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.white;
         Gizmos.DrawCube(groundCheckPos.position,groundCheckSize);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        { Health -= 10; }
     }
 }
