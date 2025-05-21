@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public Button_Manager GameOver;
 
     public float Health;
+
     void Awake()
     {
         ActivePanel = false;
