@@ -1182,7 +1182,7 @@ Transform:
   m_GameObject: {fileID: 255120758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.26, y: -2.08, z: -0.022674667}
+  m_LocalPosition: {x: 22.26, y: -2.15, z: -0.022674667}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2941,17 +2941,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8129310059100658404, guid: 662d60c51c3b01e4b90794e018772c7c, type: 3}
   m_PrefabInstance: {fileID: 1986140144}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &593548036 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3015724317581752019, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
-  m_PrefabInstance: {fileID: 5571840612430697934}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276094d36b9499c4fa07683cde1b67ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &593548041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2124332333493664708, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
@@ -3973,7 +3962,6 @@ MonoBehaviour:
   Panel_Options: {fileID: 1955157879}
   Pause_Button: {fileID: 1232783041}
   Victory_Panel: {fileID: 1128184005}
-  Player: {fileID: 593548036}
   Panel_GameOver: {fileID: 878534980}
 --- !u!1 &878534980
 GameObject:
@@ -5377,11 +5365,6 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8129310059100658404, guid: 662d60c51c3b01e4b90794e018772c7c, type: 3}
   m_PrefabInstance: {fileID: 413291147}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1114909263 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1015159799312642747, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
-  m_PrefabInstance: {fileID: 5571840612430697934}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1128184005
 GameObject:
@@ -7366,7 +7349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1691656884}
-  CamFollower: {fileID: 1114909263}
+  CamFollower: {fileID: 0}
   speed: 0.07
 --- !u!1 &1697630247
 GameObject:

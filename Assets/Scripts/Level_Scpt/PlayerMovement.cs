@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpforce = 10f;
     float HorizontalMovement;
     public Transform groundCheckPos;
-    public Vector2 groundCheckSize = new Vector2(0.5f,0.5f);
+    public Vector2 groundCheckSize = new Vector2(0.5f, 0.5f);
     public LayerMask groundLayer;
 
     public GameObject Panel_Menu;
@@ -23,7 +23,18 @@ public class PlayerMovement : MonoBehaviour
 
     public Button_Manager GameOver;
 
-    public float Health;
+    public float Health = 100f;
+
+    public SpriteRenderer spr1;
+    public SpriteRenderer spr2;
+
+    public Sprite sp0;
+    public Sprite sp10;
+    public Sprite sp20;
+    public Sprite sp30;
+    public Sprite sp40;
+    public Sprite sp50;
+
 
     void Awake()
     {
@@ -31,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        rb.linearVelocity = new Vector2 (HorizontalMovement * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
 
 
         if (Health <= 0)
@@ -45,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(isGrounded())
+        if (isGrounded())
         {
             if (context.performed)
             {
@@ -58,12 +69,12 @@ public class PlayerMovement : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             }
         }
-        
+
     }
 
     public void Esc(InputAction.CallbackContext context)
     {
-        if(!ActivePanel)
+        if (!ActivePanel)
         {
             Panel_Menu.SetActive(true);
             Time.timeScale = 0;
@@ -77,28 +88,68 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+
     private bool isGrounded()
     {
         Collider2D GroundCollider = Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer);
-        
-        if(GroundCollider) 
+
+        if (GroundCollider)
         {
             currentGroundCollider2D = GroundCollider;
-            return true; 
-        } 
-        
+            return true;
+        }
+
         return false;
     }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawCube(groundCheckPos.position,groundCheckSize);
+        Gizmos.DrawCube(groundCheckPos.position, groundCheckSize);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        { Health -= 10; }
+        { Health -= 10; Sprite(); }
+    }
+
+    private void Sprite()
+    {
+        switch (Health)
+        {
+            case 0:
+                spr1.sprite = sp0;
+                break;
+            case 10:
+                spr1.sprite = sp10;
+                break;
+            case 20:
+                spr1.sprite = sp20;
+                break;
+            case 30:
+                spr1.sprite = sp30;
+                break;
+            case 40:
+                spr1.sprite = sp40;
+                break;
+            case 50:
+                spr2.sprite = sp0;
+                break;
+            case 60:
+                spr2.sprite = sp10;
+                break;
+            case 70:
+                spr2.sprite = sp20;
+                break;
+            case 80:
+                spr2.sprite = sp30;
+                break;
+            case 90:
+                spr2.sprite = sp40;
+                break;
+            case 100:
+                spr2.sprite = sp50;
+                break;
+        }
     }
 }
