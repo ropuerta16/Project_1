@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite sp40;
     public Sprite sp50;
 
+    public Animator animator;
 
     void Awake()
     {
@@ -42,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
 
+        animator.SetFloat("XVelocity",Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("YVelocity",rb.linearVelocity.y);
 
         if (Health <= 0)
         { GameOver.GamneOver(); }
@@ -66,7 +69,14 @@ public class PlayerMovement : MonoBehaviour
                 //Press = low jump
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             }
+
+            animator.SetBool("isJumping", true);
         }
+        else
+        {
+            animator.SetBool("isJumping", false);
+        }
+
 
     }
 
