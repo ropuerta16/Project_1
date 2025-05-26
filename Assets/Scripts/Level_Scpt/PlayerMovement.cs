@@ -19,8 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool ActivePanel;
 
-    public Player_Prefab Player_Prefab;
-
     public Button_Manager GameOver;
 
     public float Health = 100f;

@@ -32,6 +32,4 @@ public class Sound_manager : MonoBehaviour
         else
         { BackgroundAudio.volume = 0.0f; spriterenderer.sprite = oldSprite; isUnMute = false; }
     }
-
-    
 }
