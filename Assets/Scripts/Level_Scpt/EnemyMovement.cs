@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
 #if UNITY_EDITOR
         Debug.DrawRay(new Vector2(Raypos.transform.position.x, Raypos.transform.position.y), Raydistance);
 #endif
-        if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
+        if (hit.collider != null && hit.collider.gameObject.CompareTag("Player") )
         {
             if (CoolDown <= 0)
             {
