@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
+    public Transform player;
+
     void Awake()
     {
         ActivePanel = false;
@@ -43,7 +45,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
 
-        animator.SetFloat("XVelocity",Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("XVelocity",rb.linearVelocity.x);
+        if (rb.linearVelocity.x < 0)
+            player.localScale = new Vector3(-1, 1, 1);
+        else
+            player.localScale = new Vector3(1,1,1);
         animator.SetFloat("YVelocity",rb.linearVelocity.y);
 
         if (Health <= 0)
@@ -117,9 +123,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("BulletEnemy"))
         { Health -= 10; Sprite(); }
     }
+
+    
 
     private void Sprite()
     {

@@ -63,7 +63,6 @@ public class Button_Manager : MonoBehaviour
     public void Victory_Click()
     {
         LoadScene("Level_1");
-        //LoadScene("MainMenu");
     }
 
     public void Option_click()
