@@ -46,10 +46,12 @@ public class PlayerManager_Scrp : MonoBehaviour
         rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
 
         animator.SetFloat("XVelocity",rb.linearVelocity.x);
+
         if (rb.linearVelocity.x < 0)
             player.localScale = new Vector3(-1, 1, 1);
         else
             player.localScale = new Vector3(1,1,1);
+
         animator.SetFloat("YVelocity",rb.linearVelocity.y);
 
         if (Health <= 0)
