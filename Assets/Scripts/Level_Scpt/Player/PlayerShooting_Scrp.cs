@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class Player_Prefab : MonoBehaviour
+public class PlayerShooting_Scrp : MonoBehaviour
 {
     public GameObject Bullet;
     public GameObject BulletSpawner;

@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-public class Text_manager : MonoBehaviour
+public class TextManager_scrp : MonoBehaviour
 {
     public GameObject Welcome;
     public GameObject Problem;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CheckFall : MonoBehaviour
+public class CheckDeathFall_scrp : MonoBehaviour
 {
     public GameObject GameOver;
     private void OnTriggerEnter2D(Collider2D collision)

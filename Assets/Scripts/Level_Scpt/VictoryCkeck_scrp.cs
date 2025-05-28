@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door_Frame : MonoBehaviour
+public class VictoryCkeck_scrp : MonoBehaviour
 {
-    public Button_Manager Manager;
+    public ButtonManager_scrp Manager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

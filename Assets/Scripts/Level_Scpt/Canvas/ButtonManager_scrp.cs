@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class Button_Manager : MonoBehaviour
+public class ButtonManager_scrp : MonoBehaviour
 {
     public GameObject Panel_Menu;
     public GameObject Panel_Options;

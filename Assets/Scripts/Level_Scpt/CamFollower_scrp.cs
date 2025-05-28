@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Cam_Follower : MonoBehaviour
+public class CamFollower_scrp : MonoBehaviour
 {
     public Transform Camera;
     public Transform CamFollower;

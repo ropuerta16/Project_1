@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Safe_Net : MonoBehaviour
+public class SafeNet_Tutorial_scrp : MonoBehaviour
 {
     public Transform Player;
 

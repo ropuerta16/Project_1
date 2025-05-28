@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sound_manager : MonoBehaviour
+public class SoundManager_scrp : MonoBehaviour
 {
     public Image spriterenderer;
 

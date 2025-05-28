@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerManager_Scrp : MonoBehaviour
 {
     public float speed = 5f;
     public Rigidbody2D rb;
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool ActivePanel;
 
-    public Button_Manager GameOver;
+    public ButtonManager_scrp GameOver;
 
     public float Health = 100f;
 

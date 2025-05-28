@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasicEnemy : MonoBehaviour
+public class BasicEnemy_scrp : MonoBehaviour
 {
     public float Health = 100;
 

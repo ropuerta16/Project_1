@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Change_Sprite : MonoBehaviour
+public class PlayerSwapper_scrp : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Player_2;
