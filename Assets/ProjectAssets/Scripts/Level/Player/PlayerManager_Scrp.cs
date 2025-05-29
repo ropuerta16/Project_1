@@ -21,15 +21,21 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     public ButtonManager_scrp GameOver;
 
-    public float Health = 100f;
+    public float Health;
+    public float MaxHealth = 100f;
 
     public Animator animator;
 
     public Transform player;
 
+    public Slider healthSlider;
+
     void Awake()
     {
+        Health = MaxHealth;
         ActivePanel = false;
+        healthSlider.maxValue = MaxHealth;
+        healthSlider.value = Health;
     }
     void Update()
     {
@@ -43,9 +49,6 @@ public class PlayerManager_Scrp : MonoBehaviour
             player.localScale = new Vector3(1,1,1);
 
         animator.SetFloat("YVelocity",rb.linearVelocity.y);
-
-        if (Health <= 0)
-        { GameOver.GamneOver(); }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -74,8 +77,6 @@ public class PlayerManager_Scrp : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
-
-
     }
 
     public void Esc(InputAction.CallbackContext context)
@@ -115,8 +116,14 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("BulletEnemy"))
-        { Health -= 10; }
+        if (collision.gameObject.CompareTag("BulletEnemy") || collision.gameObject.CompareTag("Enemy"))
+        {
+            Health -= 10; 
+            healthSlider.value = Health;
+
+            if (Health <= 0)
+            { GameOver.GamneOver(); }
+        }
     }
 
 }
