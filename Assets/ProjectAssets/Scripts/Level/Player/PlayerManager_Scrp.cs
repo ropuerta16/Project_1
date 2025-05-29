@@ -26,7 +26,7 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     public Animator animator;
 
-    public Transform player;
+    public Transform player2;
 
     public Slider healthSlider;
 
@@ -42,13 +42,13 @@ public class PlayerManager_Scrp : MonoBehaviour
         rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
 
         animator.SetFloat("XVelocity",rb.linearVelocity.x);
+        animator.SetFloat("YVelocity", rb.linearVelocity.y);
 
         if (rb.linearVelocity.x < 0)
-            player.localScale = new Vector3(-1, 1, 1);
+            player2.localScale = new Vector3(-1, 1, 1);
         else
-            player.localScale = new Vector3(1,1,1);
+            player2.localScale = new Vector3(1,1,1);
 
-        animator.SetFloat("YVelocity",rb.linearVelocity.y);
     }
 
     public void Move(InputAction.CallbackContext context)
