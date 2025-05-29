@@ -13,19 +13,22 @@ public class PlayerSwapper_scrp : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(state == "VP")
-        { 
-            Player.SetActive(false);
-            Player_2.SetActive(true);
-            state = "G";
-        }
-        else if (state == "G")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Player.SetActive(true);
-            Player_2.SetActive(false);
-            state = "VP";
+            if (state == "VP")
+            {
+                Player.SetActive(false);
+                Player_2.SetActive(true);
+                state = "G";
+            }
+            else if (state == "G")
+            {
+                Player.SetActive(true);
+                Player_2.SetActive(false);
+                state = "VP";
+            }
+            else if (state == "A")
+            { }
         }
-        else if (state == "A")
-        { }
     }
 }
