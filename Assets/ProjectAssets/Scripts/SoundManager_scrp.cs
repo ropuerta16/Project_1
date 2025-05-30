@@ -25,7 +25,7 @@ public class SoundManager_scrp : MonoBehaviour
     void Update()
     {
         if (isUnMute)
-        { MusicAudio.volume = MusicSlider.value; }
+        { MusicAudio.volume = MusicSlider.value; FXAudio.volume = FXSlider.value; }
         sliderValue = FXSlider.value;
         sliderValue = MusicSlider.value;
     }
