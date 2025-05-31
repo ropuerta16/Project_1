@@ -3387,7 +3387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c7be5ceb0e3ce44bd6477f3843d60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 1255885954}
   Save: {fileID: 486823166}
   Shoot: {fileID: 2012816722}
 --- !u!4 &577596431 stripped
@@ -6898,6 +6898,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+--- !u!4 &1255885954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2009897694631506626, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+  m_PrefabInstance: {fileID: 1255885953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1258706606
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,7 +8205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6e7e52ca967e04ea78f95c77ddabd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 1255885954}
 --- !u!61 &1608767476
 BoxCollider2D:
   m_ObjectHideFlags: 0
