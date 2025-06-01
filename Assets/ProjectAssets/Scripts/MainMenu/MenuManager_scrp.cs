@@ -6,10 +6,7 @@ public class MenuManager_scrp : MonoBehaviour
      public GameObject Options_Panel;
     public GameObject Menu_Panel;
 
-    public AudioSource BackgroundSound;
-
-    void Awake()
-    { BackgroundSound.Play(); }
+    public AudioSource MusicAudio;
 
     public void Exit_Click()
     { Application.Quit(); }

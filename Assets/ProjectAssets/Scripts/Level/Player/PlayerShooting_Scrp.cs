@@ -8,7 +8,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
     public GameObject Bullet;
     public GameObject BulletSpawner;
     private float CoolDownShot;
-    public float Maxtime;
+    public float MaxtimeCoolDown;
     public float MaxBullet = 10;
     private float currentBullet;
     private float CoolDownReload = 2f;
@@ -18,7 +18,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
     void Awake()
     {
         currentBullet = MaxBullet;
-        CoolDownShot = Maxtime;
+        CoolDownShot = MaxtimeCoolDown;
     }
     private void Update()
     {
@@ -34,7 +34,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
         if (CoolDownShot <= 0 && currentBullet > 0)
         {
             Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
-            CoolDownShot = Maxtime;
+            CoolDownShot = MaxtimeCoolDown;
             currentBullet--;
         }
         else if (currentBullet <= 0)

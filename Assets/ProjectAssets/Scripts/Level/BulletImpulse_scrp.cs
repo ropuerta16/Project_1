@@ -16,9 +16,8 @@ public class BulletImpulse_scrp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy")) { }
-        else if (collision.gameObject.CompareTag("Player")) { }
-
-            Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Bullet")) { }
+        else
+        { Destroy(gameObject); }
     }
 }

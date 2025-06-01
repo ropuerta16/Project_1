@@ -30,5 +30,7 @@ public class PlayerSwapper_scrp : MonoBehaviour
             else if (state == "A")
             { }
         }
+        else if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("BulletEnemy"))
+        { Destroy(collision); }
     }
 }
