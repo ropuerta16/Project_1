@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 45810855}
   - component: {fileID: 45810854}
   m_Layer: 5
-  m_Name: FX_txt
+  m_Name: FX_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 164727377}
   - component: {fileID: 164727376}
   m_Layer: 5
-  m_Name: NextLvL_Button
+  m_Name: NextLvL_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1768894161}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -2009,7 +2009,7 @@ GameObject:
   - component: {fileID: 387544922}
   - component: {fileID: 387544921}
   m_Layer: 5
-  m_Name: GameOverTxt
+  m_Name: GameOver_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2327,7 +2327,7 @@ GameObject:
   - component: {fileID: 431741286}
   - component: {fileID: 431741285}
   m_Layer: 5
-  m_Name: Mute_txt
+  m_Name: Mute_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2546,7 +2546,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1768894161}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -2864,6 +2864,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486823166}
   m_CullTransparentMesh: 1
+--- !u!4 &530116019 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9069781275429341999, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+  m_PrefabInstance: {fileID: 1255885953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &548485061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,9 +3284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c7be5ceb0e3ce44bd6477f3843d60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  Save: {fileID: 486823166}
-  Shoot: {fileID: 2012816722}
+  Players: {fileID: 0}
+  SaveTxt: {fileID: 0}
+  ShootTxt: {fileID: 0}
 --- !u!4 &577596431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8129310059100658404, guid: 662d60c51c3b01e4b90794e018772c7c, type: 3}
@@ -3305,7 +3310,7 @@ GameObject:
   - component: {fileID: 636679066}
   - component: {fileID: 636679065}
   m_Layer: 5
-  m_Name: Exit_Button
+  m_Name: Exit_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3386,7 +3391,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1768894161}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -3814,7 +3819,7 @@ GameObject:
   - component: {fileID: 765880392}
   - component: {fileID: 765880391}
   m_Layer: 5
-  m_Name: Resume_Button
+  m_Name: Resume_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3895,7 +3900,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -4432,7 +4437,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -5026,7 +5031,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1768894161}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -5108,7 +5113,7 @@ GameObject:
   - component: {fileID: 999141035}
   - component: {fileID: 999141034}
   m_Layer: 5
-  m_Name: Exit_Button
+  m_Name: Exit_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5189,7 +5194,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1768894161}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -5767,8 +5772,8 @@ MonoBehaviour:
   oldSprite: {fileID: 21300000, guid: e79edeb313633ec4fb58c302175a3fe6, type: 3}
   FXSlider: {fileID: 1715873065}
   MusicSlider: {fileID: 1792683757}
-  FXAudio: {fileID: 0}
-  MusicAudio: {fileID: 0}
+  FXAudio: {fileID: 1768894161}
+  MusicAudio: {fileID: 1754546174}
 --- !u!222 &1064829273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6636,7 +6641,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6390390226640474638, guid: e3233bb4e4699464a820e78460e52134, type: 3}
       propertyPath: m_Name
-      value: Background_Audio
+      value: Music_Audio
       objectReference: {fileID: 0}
     - target: {fileID: 7393175509152182325, guid: e3233bb4e4699464a820e78460e52134, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7449,7 +7454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -318.6, y: 124.6}
+  m_AnchoredPosition: {x: -318.60004, y: 124.600006}
   m_SizeDelta: {x: -700, y: -349.99997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556676566
@@ -7655,7 +7660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6e7e52ca967e04ea78f95c77ddabd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 530116019}
 --- !u!61 &1608767476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8212,7 +8217,7 @@ GameObject:
   - component: {fileID: 1718110516}
   - component: {fileID: 1718110515}
   m_Layer: 5
-  m_Name: Exit_Button
+  m_Name: Exit_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8293,7 +8298,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -8355,7 +8360,7 @@ GameObject:
   - component: {fileID: 1735574852}
   - component: {fileID: 1735574851}
   m_Layer: 5
-  m_Name: VictoryText
+  m_Name: Victory_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8615,6 +8620,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750698467}
   m_CullTransparentMesh: 1
+--- !u!82 &1754546174 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5835560443959800765, guid: e3233bb4e4699464a820e78460e52134, type: 3}
+  m_PrefabInstance: {fileID: 1295443170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1768894159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8695,7 +8705,7 @@ GameObject:
   - component: {fileID: 1769389573}
   - component: {fileID: 1769389572}
   m_Layer: 5
-  m_Name: Back_butt
+  m_Name: Back_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8776,7 +8786,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1768894161}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -8838,7 +8848,7 @@ GameObject:
   - component: {fileID: 1775632642}
   - component: {fileID: 1775632641}
   m_Layer: 5
-  m_Name: Music_txt
+  m_Name: Music_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9583,7 +9593,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1

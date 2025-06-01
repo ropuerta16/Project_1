@@ -1696,7 +1696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -318.6, y: 124.6}
+  m_AnchoredPosition: {x: -318.60004, y: 124.600006}
   m_SizeDelta: {x: -700, y: -349.99997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274992414
@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 302288619}
   - component: {fileID: 302288618}
   m_Layer: 5
-  m_Name: Resume_Button
+  m_Name: Resume_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2516,7 +2516,7 @@ GameObject:
   - component: {fileID: 494753987}
   - component: {fileID: 494753986}
   m_Layer: 5
-  m_Name: NextLvL_Button
+  m_Name: NextLvL_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2767,7 +2767,7 @@ GameObject:
   - component: {fileID: 525528501}
   - component: {fileID: 525528500}
   m_Layer: 5
-  m_Name: Mute_txt
+  m_Name: Mute_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2937,7 +2937,7 @@ GameObject:
   - component: {fileID: 549239799}
   - component: {fileID: 549239798}
   m_Layer: 5
-  m_Name: Pause_txt
+  m_Name: Pause_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3434,7 +3434,7 @@ GameObject:
   - component: {fileID: 670159289}
   - component: {fileID: 670159288}
   m_Layer: 5
-  m_Name: PauseButton
+  m_Name: Pause_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3639,7 +3639,7 @@ GameObject:
   - component: {fileID: 687944951}
   - component: {fileID: 687944950}
   m_Layer: 5
-  m_Name: Music_txt
+  m_Name: Music_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3776,7 +3776,7 @@ GameObject:
   - component: {fileID: 696155504}
   - component: {fileID: 696155503}
   m_Layer: 5
-  m_Name: GameOverTxt
+  m_Name: GameOver_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29838,7 +29838,7 @@ GameObject:
   - component: {fileID: 848781504}
   - component: {fileID: 848781503}
   m_Layer: 5
-  m_Name: VictoryText
+  m_Name: Victory_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32621,7 +32621,7 @@ GameObject:
   - component: {fileID: 1445737566}
   - component: {fileID: 1445737565}
   m_Layer: 5
-  m_Name: Exit_Button
+  m_Name: Exit_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33788,7 +33788,7 @@ GameObject:
   - component: {fileID: 1671618122}
   - component: {fileID: 1671618121}
   m_Layer: 5
-  m_Name: Exit_Button
+  m_Name: Exit_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33936,7 +33936,7 @@ GameObject:
   - component: {fileID: 1674747692}
   - component: {fileID: 1674747691}
   m_Layer: 5
-  m_Name: FX_txt
+  m_Name: FX_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34363,7 +34363,7 @@ GameObject:
   - component: {fileID: 1750658513}
   - component: {fileID: 1750658512}
   m_Layer: 5
-  m_Name: Exit_Button
+  m_Name: Exit_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35949,7 +35949,7 @@ GameObject:
   - component: {fileID: 2127424653}
   - component: {fileID: 2127424652}
   m_Layer: 5
-  m_Name: Back_butt
+  m_Name: Back_Butt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
