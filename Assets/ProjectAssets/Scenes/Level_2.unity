@@ -194,6 +194,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10809413}
   m_CullTransparentMesh: 1
+--- !u!1 &14811500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5918277021059819246, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+  m_PrefabInstance: {fileID: 970483888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &25561088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1297,10 @@ PrefabInstance:
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -1589,6 +1598,10 @@ PrefabInstance:
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
@@ -2400,6 +2413,10 @@ PrefabInstance:
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -3194,6 +3211,10 @@ PrefabInstance:
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -3433,7 +3454,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -79
   m_Sprite: {fileID: 6937817954938267909, guid: d9999bb33aae311498f3331c881c46f1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5748309, g: 0.90747595, b: 0.90943396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -6026,12 +6047,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1115160273476911138, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
+    - target: {fileID: 1115160273476911138, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: Counter
       value: 
       objectReference: {fileID: 1775489916}
     - target: {fileID: 1115160273476911138, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: counter
+      value: 
+      objectReference: {fileID: 1775489916}
+    - target: {fileID: 1115160273476911138, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: bulletSpawner
+      value: 
+      objectReference: {fileID: 14811500}
+    - target: {fileID: 1115160273476911138, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: MaxtimeCoolDown
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115160273476911138, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: maxTimeCoolDown
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1267185163465601724, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_FlipX
@@ -6074,15 +6111,59 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
+    - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: Counter
       value: 
       objectReference: {fileID: 1775489916}
+    - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: counter
+      value: 
+      objectReference: {fileID: 1775489916}
+    - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: bulletSpawner
+      value: 
+      objectReference: {fileID: 14811500}
     - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: MaxtimeCoolDown
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5821496063504343316, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964375181958857820, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6808419012669532632, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
@@ -6466,7 +6547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: distance
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
@@ -6556,7 +6637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: distance
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
@@ -7093,7 +7174,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -78
   m_Sprite: {fileID: -4178046375966092550, guid: 0af6f59ed65b6a44bb0949f9e96a68f0, type: 3}
-  m_Color: {r: 0.7028302, g: 0.9736102, b: 1, a: 1}
+  m_Color: {r: 0.4433962, g: 0.9487338, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -7518,7 +7599,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -78
   m_Sprite: {fileID: -4178046375966092550, guid: 0af6f59ed65b6a44bb0949f9e96a68f0, type: 3}
-  m_Color: {r: 0.7028302, g: 0.9736102, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -7862,7 +7943,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387065068}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c877ca9513eeef24c876313a22b63534, type: 3}
   m_Name: 
@@ -20293,6 +20374,10 @@ PrefabInstance:
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -22808,6 +22893,10 @@ PrefabInstance:
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX

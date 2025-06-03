@@ -5,44 +5,47 @@ using TMPro;
 
 public class PlayerShooting_Scrp : MonoBehaviour
 {
-    public GameObject Bullet;
-    public GameObject BulletSpawner;
-    private float CoolDownShot;
-    public float MaxtimeCoolDown;
-    public float MaxBullet = 10;
+    public GameObject bullet;
+    public GameObject bulletSpawner;
+    private float coolDownShot;
+    public float maxTimeCoolDown;
+    public float maxBullet = 10;
     private float currentBullet;
-    private float CoolDownReload = 2f;
+    private float coolDownReload = 2f;
 
-    public TMP_Text Counter;
+    public TMP_Text counter;
 
     void Awake()
     {
-        currentBullet = MaxBullet;
-        CoolDownShot = MaxtimeCoolDown;
+        currentBullet = maxBullet;
+        coolDownShot = maxTimeCoolDown;
     }
     private void Update()
     {
-        CoolDownShot -= Time.deltaTime;
+        coolDownShot -= Time.deltaTime;
 
         if (currentBullet <= 0)
-        { CoolDownReload -= Time.deltaTime; }
+        { coolDownReload -= Time.deltaTime; }
 
-        Counter.text = currentBullet.ToString();
+        counter.text = currentBullet.ToString();
     }
     public void Shoot(InputAction.CallbackContext context)
     {
-        if (CoolDownShot <= 0 && currentBullet > 0)
+        if (coolDownShot <= 0 && currentBullet > 0)
         {
-            Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
-            CoolDownShot = MaxtimeCoolDown;
+            GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+            BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+
+            coolDownShot = maxTimeCoolDown;
             currentBullet--;
         }
         else if (currentBullet <= 0)
         {
-            if (CoolDownReload <= 0)
+            if (coolDownReload <= 0)
             {
-                currentBullet = MaxBullet;
-                CoolDownReload = 2f; 
+                currentBullet = maxBullet;
+                counter.text = currentBullet.ToString();
+                coolDownReload = 2f; 
             }
         }
     }

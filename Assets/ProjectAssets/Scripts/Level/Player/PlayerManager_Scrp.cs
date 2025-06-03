@@ -41,14 +41,14 @@ public class PlayerManager_Scrp : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
 
-        animator.SetFloat("XVelocity",rb.linearVelocity.x);
-
+        animator.SetFloat("XVelocity", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("YVelocity", rb.linearVelocity.y);
+        
         if (rb.linearVelocity.x < 0)
-            player.localScale = new Vector3(-1, 1, 1);
+        { player.localScale = new Vector3(-1, 1, 1); }
         else
-            player.localScale = new Vector3(1,1,1);
+        { player.localScale = new Vector3(1, 1, 1);  }
 
-        animator.SetFloat("YVelocity",rb.linearVelocity.y);
     }
 
     public void Move(InputAction.CallbackContext context)

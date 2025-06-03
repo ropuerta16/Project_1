@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletImpulse_scrp : MonoBehaviour
+public class BulletManager_scrp : MonoBehaviour
 {
     public Vector3 movementDirection = Vector3.zero;
     public float speed = 25f;
