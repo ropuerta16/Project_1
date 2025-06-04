@@ -21,7 +21,7 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     public ButtonManager_scrp GameOver;
 
-    public float Health;
+    private float Health;
     public float MaxHealth = 100f;
 
     public Animator animator;
@@ -29,6 +29,8 @@ public class PlayerManager_Scrp : MonoBehaviour
     public Transform player;
 
     public Slider healthSlider;
+
+    public AudioSource Jump_Audio;
 
     void Awake()
     {
@@ -47,7 +49,7 @@ public class PlayerManager_Scrp : MonoBehaviour
         if (rb.linearVelocity.x < 0)
         { player.localScale = new Vector3(-1, 1, 1); }
         else
-        { player.localScale = new Vector3(1, 1, 1);  }
+        { player.localScale = new Vector3(1, 1, 1); }
 
     }
 
@@ -70,7 +72,7 @@ public class PlayerManager_Scrp : MonoBehaviour
                 //Press = low jump
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             }
-
+            Jump_Audio.Play();
             animator.SetBool("isJumping", true);
         }
         else

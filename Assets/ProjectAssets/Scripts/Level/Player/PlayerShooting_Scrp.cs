@@ -15,6 +15,8 @@ public class PlayerShooting_Scrp : MonoBehaviour
 
     public TMP_Text counter;
 
+    public Rigidbody2D player;
+
     void Awake()
     {
         currentBullet = maxBullet;
@@ -33,10 +35,23 @@ public class PlayerShooting_Scrp : MonoBehaviour
     {
         if (coolDownShot <= 0 && currentBullet > 0)
         {
-            GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-            BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
-            coolDownShot = maxTimeCoolDown;
+            if (player.linearVelocity.x < 0)
+            {
+                 GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+
+                 BulletMovementComp.movementDirection = new Vector3(-1, 0, 0);
+            }
+            else
+            {
+                GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+
+                BulletMovementComp.movementDirection = new Vector3(1, 0, 0);
+            }
+
+                coolDownShot = maxTimeCoolDown;
             currentBullet--;
         }
         else if (currentBullet <= 0)

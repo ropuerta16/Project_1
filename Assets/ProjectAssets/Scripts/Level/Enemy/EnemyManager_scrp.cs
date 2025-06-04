@@ -35,7 +35,7 @@ public class EnemyManager_scrp : MonoBehaviour
                 GameObject Bullet = Instantiate(bullet, raypos.transform.position, raypos.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
-                BulletMovementComp.movementDirection = new Vector3(1,1,1);
+                BulletMovementComp.movementDirection = new Vector3(-1,1,1);
 
                 coolDown = 0.5f;
             }
@@ -48,7 +48,7 @@ public class EnemyManager_scrp : MonoBehaviour
                 GameObject Bullet = Instantiate(bullet, raypos_2.transform.position, raypos_2.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
-                BulletMovementComp.movementDirection = new Vector3(-1,1,1);
+                BulletMovementComp.movementDirection = new Vector3(1,1,1);
 
                 coolDown = 0.5f;
             }

@@ -12,8 +12,10 @@ public class SoundManager_scrp : MonoBehaviour
     public Slider FXSlider;
     public Slider MusicSlider;
 
-    public AudioSource FXAudio;
+    public AudioSource ButtonAudio;
     public AudioSource MusicAudio;
+
+    public GameObject Audio;
 
     public static float FXSliderValue;
     public static float MusicSliderValue;
@@ -27,7 +29,7 @@ public class SoundManager_scrp : MonoBehaviour
         if (isUnMute)
         { 
             MusicAudio.volume = MusicSlider.value;
-            FXAudio.volume = FXSlider.value;
+            ButtonAudio.volume = FXSlider.value;
         }
         MusicSliderValue = MusicSlider.value;
         FXSliderValue = FXSlider.value;
@@ -36,8 +38,8 @@ public class SoundManager_scrp : MonoBehaviour
     public void MuteClick()
     {
         if (!isUnMute)
-        { MusicAudio.volume = 1.0f; FXAudio.volume = 1.0f; spriterenderer.sprite = newSprite; isUnMute = true; }
+        { Audio.SetActive(true); spriterenderer.sprite = newSprite; isUnMute = true; }
         else
-        { MusicAudio.volume = 0.0f; FXAudio.volume = 0.0f; spriterenderer.sprite = oldSprite; isUnMute = false; }
+        { Audio.SetActive(false); spriterenderer.sprite = oldSprite; isUnMute = false; }
     }
 }
