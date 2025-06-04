@@ -1013,7 +1013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_Grass
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,6 +1060,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2995952195955578681, guid: 1cf829fe5e8304d4a8fcc8c02f4409a8, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
@@ -1086,7 +1090,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_VP
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1128,6 +1132,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
@@ -1354,7 +1362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_VP
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1396,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
@@ -29756,7 +29768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_Grass
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29802,6 +29814,10 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 2995952195955578681, guid: 1cf829fe5e8304d4a8fcc8c02f4409a8, type: 3}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
@@ -30928,7 +30944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_Grass
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30974,6 +30990,10 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 2995952195955578681, guid: 1cf829fe5e8304d4a8fcc8c02f4409a8, type: 3}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
@@ -31085,7 +31105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_Grass
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31131,6 +31151,10 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 2995952195955578681, guid: 1cf829fe5e8304d4a8fcc8c02f4409a8, type: 3}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
@@ -31683,7 +31707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049047847500482164, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_Name
-      value: Enemy_2
+      value: Enemy_Grass
       objectReference: {fileID: 0}
     - target: {fileID: 5098357997402038528, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31729,6 +31753,10 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 2995952195955578681, guid: 1cf829fe5e8304d4a8fcc8c02f4409a8, type: 3}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: CoolDown
       value: 1
