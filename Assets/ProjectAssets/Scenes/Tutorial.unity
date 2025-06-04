@@ -5620,11 +5620,15 @@ PrefabInstance:
     - target: {fileID: 1503190005960879154, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: GameOver
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 894497080}
     - target: {fileID: 1503190005960879154, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: Panel_Menu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1053731169}
+    - target: {fileID: 1503190005960879154, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 398799742}
     - target: {fileID: 3827402683927928341, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_IsActive
       value: 0

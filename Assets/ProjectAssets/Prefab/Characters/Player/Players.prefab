@@ -126,7 +126,7 @@ MonoBehaviour:
   GameOver: {fileID: 0}
   MaxHealth: 100
   animator: {fileID: 6986439687657892618}
-  player: {fileID: 0}
+  player: {fileID: 9069781275429341999}
   healthSlider: {fileID: 0}
   Jump_Audio: {fileID: 5714939518700639461, guid: 9991389e25b280c4f9c44cdc975fbb61, type: 3}
 --- !u!114 &1177171947008027504
@@ -258,6 +258,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5631243076249441162}
         m_TargetAssemblyTypeName: Player_Prefab, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1115160273476911138}
+        m_TargetAssemblyTypeName: PlayerShooting_Scrp, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 0
         m_Arguments:
@@ -509,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player_1
       objectReference: {fileID: 0}
     - target: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: m_IsActive
@@ -676,6 +688,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6986439687657892618}
   m_SourcePrefab: {fileID: 100100000, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+--- !u!114 &1115160273476911138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+  m_PrefabInstance: {fileID: 5170233179971705518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3827402683927928341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a93d5a67cea9a4bafeddb02a56491b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3827402683927928341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}

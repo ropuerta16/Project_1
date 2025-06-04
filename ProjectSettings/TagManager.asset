@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - BulletEnemy
+  - Potion
   layers:
   - Default
   - TransparentFX

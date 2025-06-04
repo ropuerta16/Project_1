@@ -21,7 +21,7 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     public ButtonManager_scrp GameOver;
 
-    private float Health;
+    public float Health;
     public float MaxHealth = 100f;
 
     public Animator animator;

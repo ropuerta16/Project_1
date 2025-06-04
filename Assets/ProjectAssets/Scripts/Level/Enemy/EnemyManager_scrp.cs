@@ -6,6 +6,7 @@ public class EnemyManager_scrp : MonoBehaviour
     public float coolDown = 1f;
 
     public GameObject bullet;
+    public Transform bulletLocal;
 
     private Vector2 rayDistance = new Vector2(-1, 0);
     private Vector2 rayDistance_2 = new Vector2(1, 0);
@@ -35,7 +36,8 @@ public class EnemyManager_scrp : MonoBehaviour
                 GameObject Bullet = Instantiate(bullet, raypos.transform.position, raypos.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
-                BulletMovementComp.movementDirection = new Vector3(-1,1,1);
+                BulletMovementComp.movementDirection = new Vector3(-1,0,0);
+                bulletLocal.localScale = new Vector3(-1,1,1);
 
                 coolDown = 0.5f;
             }
@@ -48,7 +50,8 @@ public class EnemyManager_scrp : MonoBehaviour
                 GameObject Bullet = Instantiate(bullet, raypos_2.transform.position, raypos_2.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
-                BulletMovementComp.movementDirection = new Vector3(1,1,1);
+                BulletMovementComp.movementDirection = new Vector3(1,0,0);
+                bulletLocal.localScale = new Vector3(1, 1, 1);
 
                 coolDown = 0.5f;
             }
