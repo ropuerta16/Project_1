@@ -509,6 +509,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5918277021059819246}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: bulletSpawner
+      value: 
+      objectReference: {fileID: 5918277021059819246}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: maxTimeCoolDown
       value: 0.5
       objectReference: {fileID: 0}
@@ -638,7 +642,7 @@ PrefabInstance:
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
+      objectReference: {fileID: 2995952195955578681, guid: 5f32dfbf65a340f4081d16fee3780682, type: 3}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: player
       value: 
@@ -649,6 +653,10 @@ PrefabInstance:
       objectReference: {fileID: 6986439687657892618}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: BulletSpawner
+      value: 
+      objectReference: {fileID: 5918277021059819246}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 5918277021059819246}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}

@@ -1305,6 +1305,14 @@ PrefabInstance:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -1525,6 +1533,14 @@ PrefabInstance:
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -1615,6 +1631,14 @@ PrefabInstance:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -2444,6 +2468,14 @@ PrefabInstance:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -3246,6 +3278,14 @@ PrefabInstance:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6496,6 +6536,14 @@ PrefabInstance:
       propertyPath: CoolDown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6724,8 +6772,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: distance_2
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6830,6 +6882,14 @@ PrefabInstance:
       propertyPath: distance
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -20639,6 +20699,14 @@ PrefabInstance:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -23046,6 +23114,14 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: bulletScale
       value: 
       objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
@@ -23213,6 +23289,14 @@ PrefabInstance:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: bulletScale
+      value: 
+      objectReference: {fileID: 135761803040835909, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
     - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: m_FlipX
       value: 1

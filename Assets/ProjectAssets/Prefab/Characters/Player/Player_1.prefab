@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a93d5a67cea9a4bafeddb02a56491b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  bulletSpawner_Right: {fileID: 0}
-  bulletSpawner_Left: {fileID: 0}
+  bullet: {fileID: 2995952195955578681, guid: 5f32dfbf65a340f4081d16fee3780682, type: 3}
+  bulletSpawner: {fileID: 0}
   maxTimeCoolDown: 0
   maxBullet: 10
+  animator: {fileID: 0}
   counter: {fileID: 0}
   player: {fileID: 0}

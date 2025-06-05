@@ -42,7 +42,6 @@ public class EnemyManager_scrp : MonoBehaviour
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
                 BulletMovementComp.movementDirection = new Vector3(-1,0,0);
-                bulletScale.localScale = new Vector3(-1,1,1);
 
                 coolDown = 0.5f;
             }
@@ -58,7 +57,6 @@ public class EnemyManager_scrp : MonoBehaviour
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
                 BulletMovementComp.movementDirection = new Vector3(1,0,0);
-                bulletScale.localScale = new Vector3(1, 1, 1);
 
                 coolDown = 0.5f;
             }

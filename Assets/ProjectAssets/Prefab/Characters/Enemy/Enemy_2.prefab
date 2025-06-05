@@ -180,8 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   coolDown: 1
-  bullet: {fileID: 2995952195955578681, guid: 8e239ebeab984f74baa971ddc8a222cb, type: 3}
-  bulletLocal: {fileID: 0}
+  bullet: {fileID: 0}
+  bulletScale: {fileID: 0}
   distance_1: 15
   distance_2: -15
   raypos: {fileID: 5016383109359784482}
