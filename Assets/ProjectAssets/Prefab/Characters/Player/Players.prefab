@@ -124,6 +124,7 @@ MonoBehaviour:
     m_Bits: 8
   Panel_Menu: {fileID: 0}
   GameOver: {fileID: 0}
+  Health: 0
   MaxHealth: 100
   animator: {fileID: 6986439687657892618}
   player: {fileID: 9069781275429341999}
@@ -500,6 +501,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7844210485570560352}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6986439687657892618}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: BulletSpawner
       value: 
       objectReference: {fileID: 5918277021059819246}
@@ -638,6 +643,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7844210485570560352}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6986439687657892618}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: BulletSpawner
       value: 

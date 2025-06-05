@@ -13,6 +13,8 @@ public class PlayerShooting_Scrp : MonoBehaviour
     private float currentBullet;
     private float coolDownReload = 2f;
 
+    public Animator animator;
+
     public TMP_Text counter;
 
     public Rigidbody2D player;
@@ -35,13 +37,15 @@ public class PlayerShooting_Scrp : MonoBehaviour
     {
         if (coolDownShot <= 0 && currentBullet > 0)
         {
+            animator.SetBool("isAttacking",true);
 
             if (player.linearVelocity.x < 0)
             {
-                 GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+                GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
-                 BulletMovementComp.movementDirection = new Vector3(-1, 0, 0);
+                BulletMovementComp.movementDirection = new Vector3(-1, 0, 0);
+
             }
             else
             {
@@ -51,7 +55,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
                 BulletMovementComp.movementDirection = new Vector3(1, 0, 0);
             }
 
-                coolDownShot = maxTimeCoolDown;
+            coolDownShot = maxTimeCoolDown;
             currentBullet--;
         }
         else if (currentBullet <= 0)
@@ -60,7 +64,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
             {
                 currentBullet = maxBullet;
                 counter.text = currentBullet.ToString();
-                coolDownReload = 2f; 
+                coolDownReload = 2f;
             }
         }
     }
