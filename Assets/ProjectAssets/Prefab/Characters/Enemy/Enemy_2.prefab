@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1802020972247662855}
   - component: {fileID: 223289733503391128}
   - component: {fileID: 6231214763138577249}
+  - component: {fileID: 2963899470722816047}
   m_Layer: 0
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 99
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -180,9 +181,34 @@ MonoBehaviour:
   health: 100
   coolDown: 1
   bullet: {fileID: 2995952195955578681, guid: 8e239ebeab984f74baa971ddc8a222cb, type: 3}
-  distance: 15
+  bulletLocal: {fileID: 0}
+  distance_1: 15
+  distance_2: -15
   raypos: {fileID: 5016383109359784482}
   raypos_2: {fileID: 6018342081475586607}
+  animator: {fileID: 2963899470722816047}
+--- !u!95 &2963899470722816047
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049047847500482164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e877d12b0c183194b91674f2c5954336, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5016383109359784482
 GameObject:
   m_ObjectHideFlags: 0

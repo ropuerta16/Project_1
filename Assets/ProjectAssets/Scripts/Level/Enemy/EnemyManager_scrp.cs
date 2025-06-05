@@ -6,13 +6,16 @@ public class EnemyManager_scrp : MonoBehaviour
     public float coolDown = 1f;
 
     public GameObject bullet;
-    public Transform bulletLocal;
+    public Transform bulletScale;
 
     private Vector2 rayDistance = new Vector2(-1, 0);
     private Vector2 rayDistance_2 = new Vector2(1, 0);
-    public float distance;
+    public float distance_1;
+    public float distance_2;
     public GameObject raypos;
     public GameObject raypos_2;
+
+    public Animator animator;
 
     private void Update()
     {
@@ -21,8 +24,8 @@ public class EnemyManager_scrp : MonoBehaviour
         if (health <= 0)
         { Destroy(gameObject); }
 
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(raypos.transform.position.x, raypos.transform.position.y), rayDistance, distance);
-        RaycastHit2D hit_2 = Physics2D.Raycast(new Vector2(raypos_2.transform.position.x, raypos_2.transform.position.y), rayDistance_2, distance);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(raypos.transform.position.x, raypos.transform.position.y), rayDistance, distance_1);
+        RaycastHit2D hit_2 = Physics2D.Raycast(new Vector2(raypos_2.transform.position.x, raypos_2.transform.position.y), rayDistance_2, distance_2);
 
 
 #if UNITY_EDITOR
@@ -33,11 +36,13 @@ public class EnemyManager_scrp : MonoBehaviour
         {
             if (coolDown <= 0)
             {
+                animator.SetTrigger("isAttacking_Enemy");
+
                 GameObject Bullet = Instantiate(bullet, raypos.transform.position, raypos.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
                 BulletMovementComp.movementDirection = new Vector3(-1,0,0);
-                bulletLocal.localScale = new Vector3(-1,1,1);
+                bulletScale.localScale = new Vector3(-1,1,1);
 
                 coolDown = 0.5f;
             }
@@ -47,11 +52,13 @@ public class EnemyManager_scrp : MonoBehaviour
         {
             if (coolDown <= 0)
             {
+                animator.SetTrigger("isAttacking_Enemy");
+
                 GameObject Bullet = Instantiate(bullet, raypos_2.transform.position, raypos_2.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
                 BulletMovementComp.movementDirection = new Vector3(1,0,0);
-                bulletLocal.localScale = new Vector3(1, 1, 1);
+                bulletScale.localScale = new Vector3(1, 1, 1);
 
                 coolDown = 0.5f;
             }

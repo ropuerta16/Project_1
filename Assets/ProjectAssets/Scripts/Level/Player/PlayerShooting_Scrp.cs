@@ -37,7 +37,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
     {
         if (coolDownShot <= 0 && currentBullet > 0)
         {
-            animator.SetBool("isAttacking",true);
+            animator.SetTrigger("isAttacking");
 
             if (player.linearVelocity.x < 0)
             {
