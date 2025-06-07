@@ -19,6 +19,10 @@ public class PlayerShooting_Scrp : MonoBehaviour
 
     public Rigidbody2D player;
 
+    public AudioSource bullet_Audio;
+
+    public GameObject Panel_Reloading;
+
     void Awake()
     {
         currentBullet = maxBullet;
@@ -32,23 +36,39 @@ public class PlayerShooting_Scrp : MonoBehaviour
         { coolDownReload -= Time.deltaTime; }
 
         counter.text = currentBullet.ToString();
+
+
+        if (coolDownReload <= 0)
+        {
+            Panel_Reloading.SetActive(false);
+            currentBullet = maxBullet;
+            coolDownReload = 2f;
+        }
+
+
     }
     public void Shoot(InputAction.CallbackContext context)
     {
+        if (!gameObject.activeSelf)
+        { return; }
+
         if (coolDownShot <= 0 && currentBullet > 0)
         {
             animator.SetTrigger("isAttacking");
 
             if (player.linearVelocity.x < 0)
             {
+                bullet_Audio.Play();
+
                 GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
                 BulletMovementComp.movementDirection = new Vector3(-1, 0, 0);
-
             }
             else
             {
+                bullet_Audio.Play();
+
                 GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
@@ -60,12 +80,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
         }
         else if (currentBullet <= 0)
         {
-            if (coolDownReload <= 0)
-            {
-                currentBullet = maxBullet;
-                counter.text = currentBullet.ToString();
-                coolDownReload = 2f;
-            }
+            Panel_Reloading.SetActive(true);
         }
     }
 }

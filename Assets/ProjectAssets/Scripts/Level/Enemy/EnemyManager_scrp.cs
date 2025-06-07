@@ -18,6 +18,8 @@ public class EnemyManager_scrp : MonoBehaviour
 
     public Animator animator;
 
+    public AudioSource bullet_Audio;
+
     private void Awake()
     {
         coolDown = MaxCoolDown;
@@ -26,8 +28,7 @@ public class EnemyManager_scrp : MonoBehaviour
     {
         coolDown -= Time.deltaTime;
 
-        if (health <= 0)
-        { Destroy(gameObject); }
+        
 
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(raypos.transform.position.x, raypos.transform.position.y), rayDistance, distance_1);
         RaycastHit2D hit_2 = Physics2D.Raycast(new Vector2(raypos_2.transform.position.x, raypos_2.transform.position.y), rayDistance_2, distance_2);
@@ -43,6 +44,8 @@ public class EnemyManager_scrp : MonoBehaviour
             {
                 animator.SetTrigger("isAttacking_Enemy");
                 
+                bullet_Audio.Play();
+
                 GameObject Bullet = Instantiate(bullet, raypos.transform.position, raypos.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
@@ -58,6 +61,8 @@ public class EnemyManager_scrp : MonoBehaviour
             {
                 animator.SetTrigger("isAttacking_Enemy");
 
+                bullet_Audio.Play();
+
                 GameObject Bullet = Instantiate(bullet, raypos_2.transform.position, raypos_2.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
@@ -71,6 +76,19 @@ public class EnemyManager_scrp : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        { health -= 50; Destroy(collision.gameObject); }
+        { 
+            health -= 50; 
+            Destroy(collision.gameObject);
+
+            if (health <= 0)
+            {
+                animator.SetTrigger("isDead_Enemy");
+            }
+        }
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 }

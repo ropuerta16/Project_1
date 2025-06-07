@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 99
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -8764409678962464451, guid: 671e711329365b3428931cf134695507, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.875, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   distance_2: -15
   raypos: {fileID: 5016383109359784482}
   raypos_2: {fileID: 6018342081475586607}
-  enemy: {fileID: 5098357997402038528}
   animator: {fileID: 2963899470722816047}
+  bullet_Audio: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
 --- !u!95 &2963899470722816047
 Animator:
   serializedVersion: 7

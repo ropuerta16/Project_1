@@ -281,6 +281,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1188806054922042848, guid: f2028f6405bb1484bbe6b68a269f48a9, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 28099426-5cc1-4ad2-b8bb-b3c274cd9d12
     m_ActionName: 'Player/Shoot[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -505,6 +517,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6986439687657892618}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: bullet_Audio
+      value: 
+      objectReference: {fileID: 1188806054922042848, guid: f2028f6405bb1484bbe6b68a269f48a9, type: 3}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: BulletSpawner
       value: 
       objectReference: {fileID: 5918277021059819246}
@@ -651,6 +667,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 6986439687657892618}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: bullet_Audio
+      value: 
+      objectReference: {fileID: 1188806054922042848, guid: f2028f6405bb1484bbe6b68a269f48a9, type: 3}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: BulletSpawner
       value: 

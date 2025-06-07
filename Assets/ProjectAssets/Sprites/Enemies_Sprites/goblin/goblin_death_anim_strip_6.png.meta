@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,10 +54,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,10 +122,10 @@ TextureImporter:
       name: goblin_death_anim_strip_6_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 15
-        height: 16
+        x: 2
+        y: 1
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: goblin_death_anim_strip_6_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 6
-        width: 13
-        height: 10
+        x: 18
+        y: 7
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: goblin_death_anim_strip_6_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 5
-        width: 60
-        height: 11
+        x: 35
+        y: 6
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,11 +184,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: goblin_death_anim_strip_6_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 6
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e8e416603f38940a1410b4ee0a7959
+      internalID: 2121287964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_death_anim_strip_6_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 5
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc6dae4b6e032f4198fbd66124fa3e0
+      internalID: 1278744432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_death_anim_strip_6_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 5
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029dc31eceddc024cbe1f19aa38029c1
+      internalID: -499069222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5bcdb2cbc3c2ffc41b2421cbe6a78ed9
     internalID: 0
     vertices: []
     indices: 
@@ -201,6 +267,9 @@ TextureImporter:
       goblin_death_anim_strip_6_0: -4454485551354414918
       goblin_death_anim_strip_6_1: 6609010165032081395
       goblin_death_anim_strip_6_2: -6310726310726893129
+      goblin_death_anim_strip_6_3: 2121287964
+      goblin_death_anim_strip_6_4: 1278744432
+      goblin_death_anim_strip_6_5: -499069222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
