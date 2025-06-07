@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class EnemyManager_scrp : MonoBehaviour
 {
-    public float health = 100;
-    public float coolDown = 1f;
+    public float health;
+    private float coolDown;
+    public float MaxCoolDown;
 
     public GameObject bullet;
     public Transform bulletScale;
@@ -17,6 +18,10 @@ public class EnemyManager_scrp : MonoBehaviour
 
     public Animator animator;
 
+    private void Awake()
+    {
+        coolDown = MaxCoolDown;
+    }
     private void Update()
     {
         coolDown -= Time.deltaTime;
@@ -37,13 +42,13 @@ public class EnemyManager_scrp : MonoBehaviour
             if (coolDown <= 0)
             {
                 animator.SetTrigger("isAttacking_Enemy");
-
+                
                 GameObject Bullet = Instantiate(bullet, raypos.transform.position, raypos.transform.rotation);
                 BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
 
                 BulletMovementComp.movementDirection = new Vector3(-1,0,0);
-
-                coolDown = 0.5f;
+                
+                coolDown = MaxCoolDown;
             }
         }
 
@@ -58,7 +63,7 @@ public class EnemyManager_scrp : MonoBehaviour
 
                 BulletMovementComp.movementDirection = new Vector3(1,0,0);
 
-                coolDown = 0.5f;
+                coolDown = MaxCoolDown;
             }
         }
     }
@@ -66,6 +71,6 @@ public class EnemyManager_scrp : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        { health -= 50; }
+        { health -= 50; Destroy(collision.gameObject); }
     }
 }

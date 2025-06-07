@@ -51,6 +51,8 @@ public class PlayerManager_Scrp : MonoBehaviour
         else
         { player.localScale = new Vector3(1, 1, 1); }
 
+        if (Health <= 0)
+        { GameOver.GamneOver(); }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -118,14 +120,18 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("BulletEnemy") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("BulletEnemy") )
         {
             Health -= 10; 
-            healthSlider.value = Health;
-
-            if (Health <= 0)
-            { GameOver.GamneOver(); }
+            Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Health -= 20;
+        }
+
+        healthSlider.value = Health;
+
     }
 
 }

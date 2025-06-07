@@ -124,7 +124,7 @@ MonoBehaviour:
     m_Bits: 8
   Panel_Menu: {fileID: 0}
   GameOver: {fileID: 0}
-  Health: 0
+  Health: 100
   MaxHealth: 100
   animator: {fileID: 6986439687657892618}
   player: {fileID: 9069781275429341999}

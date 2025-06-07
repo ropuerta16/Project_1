@@ -11,7 +11,6 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public GameObject Panel_GameOver;
 
-
     private void Awake()
     {
         Time.timeScale = 1;
