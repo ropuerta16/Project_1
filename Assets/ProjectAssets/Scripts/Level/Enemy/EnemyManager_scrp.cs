@@ -27,8 +27,6 @@ public class EnemyManager_scrp : MonoBehaviour
     {
         coolDown -= Time.deltaTime;
 
-        
-
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(raypos.transform.position.x, raypos.transform.position.y), rayDistance, distance_1);
         RaycastHit2D hit_2 = Physics2D.Raycast(new Vector2(raypos_2.transform.position.x, raypos_2.transform.position.y), rayDistance_2, distance_2);
 

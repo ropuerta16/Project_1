@@ -187,6 +187,8 @@ MonoBehaviour:
   raypos_2: {fileID: 6018342081475586607}
   animator: {fileID: 2963899470722816047}
   bullet_Audio: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
+  coll2D: {fileID: 223289733503391128}
+  rb: {fileID: 1802020972247662855}
 --- !u!95 &2963899470722816047
 Animator:
   serializedVersion: 7
