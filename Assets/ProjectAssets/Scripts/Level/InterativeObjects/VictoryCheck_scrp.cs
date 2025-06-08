@@ -9,7 +9,11 @@ public class VictoryCheck_scrp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Victory_Audio.Play();
-        Manager.Victory();
+        if (collision.CompareTag("Player"))
+        {
+            Victory_Audio.Play();
+            Manager.Victory();
+        }
+
     }
 }

@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  MaxCoolDown: 5
+  MaxCoolDown: 3
   bullet: {fileID: 0}
   bulletScale: {fileID: 0}
   distance_1: 15

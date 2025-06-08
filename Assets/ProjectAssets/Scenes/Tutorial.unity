@@ -5301,8 +5301,8 @@ MonoBehaviour:
   FXSlider: {fileID: 1715873065}
   MusicSlider: {fileID: 1792683757}
   ButtonAudio: {fileID: 1768894161}
-  BackgroundAudio: {fileID: 0}
-  FxAudio: {fileID: 0}
+  BackgroundAudio: {fileID: 1295443172}
+  FxAudio: {fileID: 1910833905}
 --- !u!222 &1064829273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5790,6 +5790,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2123030781}
     - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: bullet_Audio
+      value: 
+      objectReference: {fileID: 686866614}
+    - target: {fileID: 5631243076249441162, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: Panel_Reloading
       value: 
       objectReference: {fileID: 1877567452}
@@ -5803,7 +5807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9069781275429341999, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 101.47
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 9069781275429341999, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5880,7 +5884,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.06, y: 3.27}
+  m_AnchoredPosition: {x: -71.06, y: 2.09}
   m_SizeDelta: {x: 10, y: 2.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258706608
@@ -5903,7 +5907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: For this trial use W or the Spacebar to jump
+  m_text: For this trial use W to jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5968,7 +5972,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.533412, w: -0.36928678}
+  m_margin: {x: 0, y: 0, z: -0.533412, w: 0.807497}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6170,6 +6174,11 @@ PrefabInstance:
 --- !u!4 &1295443171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7393175509152182325, guid: e3233bb4e4699464a820e78460e52134, type: 3}
+  m_PrefabInstance: {fileID: 1295443170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1295443172 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5835560443959800765, guid: e3233bb4e4699464a820e78460e52134, type: 3}
   m_PrefabInstance: {fileID: 1295443170}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1303417206 stripped
@@ -9894,7 +9903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Take care, after this wall there's an enemy, press V to shoot
+  m_text: Take care, after this wall there's an enemy, press spacebar to shoot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10947,6 +10956,10 @@ PrefabInstance:
       propertyPath: bullet_Audio
       value: 
       objectReference: {fileID: 686866614}
+    - target: {fileID: 7289015211686716993, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
