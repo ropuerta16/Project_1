@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class CheckDeathFall_scrp : MonoBehaviour
 {
-    public GameObject GameOver;
+    public ButtonManager_scrp Manager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Time.timeScale = 0.0f;
-        GameOver.SetActive(true);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Manager.GameOver();
+        }
     }
 }

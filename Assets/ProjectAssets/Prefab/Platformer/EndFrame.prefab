@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Manager: {fileID: 0}
+  Victory_Audio: {fileID: 7502179694803350972, guid: df0b0d084715b9643937539a76e17062, type: 3}
+  Background_Audio: {fileID: 5835560443959800765, guid: e3233bb4e4699464a820e78460e52134, type: 3}
 --- !u!61 &276481395861718967
 BoxCollider2D:
   m_ObjectHideFlags: 0

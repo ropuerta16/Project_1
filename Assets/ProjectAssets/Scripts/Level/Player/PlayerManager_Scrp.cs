@@ -51,8 +51,7 @@ public class PlayerManager_Scrp : MonoBehaviour
         else
         { player.localScale = new Vector3(1, 1, 1); }
 
-        if (Health <= 0)
-        { GameOver.GamneOver(); }
+
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -131,6 +130,9 @@ public class PlayerManager_Scrp : MonoBehaviour
         }
 
         healthSlider.value = Health;
+
+        if (Health <= 0)
+        { GameOver.GameOver(); }
 
     }
 

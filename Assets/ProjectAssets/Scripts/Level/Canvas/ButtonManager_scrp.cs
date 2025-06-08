@@ -11,13 +11,20 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public GameObject Panel_GameOver;
 
+    public AudioSource Background_Audio;
+    public AudioSource GameOver_Audio;
+    public AudioSource Victory_Audio;
+
+
     private void Awake()
     {
         Time.timeScale = 1;
     }
 
-    public void GamneOver()
+    public void GameOver()
     {
+        Background_Audio.Stop();
+        GameOver_Audio.Play();
         Panel_GameOver.SetActive(true);
         Pause_Button.SetActive(false);
         Time.timeScale = 0;
@@ -25,6 +32,8 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public void Victory()
     {
+        Background_Audio.Stop();
+        Victory_Audio.Play();
         Victory_Panel.SetActive(true);
         Pause_Button.SetActive(false);
         Time.timeScale = 0;
