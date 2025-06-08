@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 7844210485570560352}
   m_Layer: 0
   m_Name: Players
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +507,7 @@ PrefabInstance:
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 2995952195955578681, guid: 42656c24982a9284ca1845b9cdd2cbf3, type: 3}
+      objectReference: {fileID: 2995952195955578681, guid: 5f32dfbf65a340f4081d16fee3780682, type: 3}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: player
       value: 
@@ -551,6 +551,10 @@ PrefabInstance:
     - target: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8525027665580292070, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: m_Enabled
@@ -658,7 +662,7 @@ PrefabInstance:
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 2995952195955578681, guid: 5f32dfbf65a340f4081d16fee3780682, type: 3}
+      objectReference: {fileID: 2995952195955578681, guid: 98ddb21b43f7cf745ba15d9bf68be9ec, type: 3}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: player
       value: 
@@ -702,6 +706,10 @@ PrefabInstance:
     - target: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277037605724374203, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8525027665580292070, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: m_Enabled

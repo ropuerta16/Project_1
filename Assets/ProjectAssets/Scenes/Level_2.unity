@@ -3735,8 +3735,8 @@ MonoBehaviour:
   FXSlider: {fileID: 392775148}
   MusicSlider: {fileID: 946761749}
   ButtonAudio: {fileID: 716779322}
-  MusicAudio: {fileID: 1388172380}
-  Audio: {fileID: 1890531246}
+  BackgroundAudio: {fileID: 1388172380}
+  FxAudio: {fileID: 454917118}
 --- !u!222 &502191426
 CanvasRenderer:
   m_ObjectHideFlags: 0

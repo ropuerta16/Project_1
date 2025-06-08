@@ -2932,9 +2932,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c7be5ceb0e3ce44bd6477f3843d60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players: {fileID: 0}
-  SaveTxt: {fileID: 0}
-  ShootTxt: {fileID: 0}
+  Players: {fileID: 530116019}
+  SaveTxt: {fileID: 486823166}
+  ShootTxt: {fileID: 2012816722}
 --- !u!1 &636679063
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,8 +5301,8 @@ MonoBehaviour:
   FXSlider: {fileID: 1715873065}
   MusicSlider: {fileID: 1792683757}
   ButtonAudio: {fileID: 1768894161}
-  MusicAudio: {fileID: 1754546174}
-  Audio: {fileID: 1780557773}
+  BackgroundAudio: {fileID: 0}
+  FxAudio: {fileID: 0}
 --- !u!222 &1064829273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5393,7 +5393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy
+  m_text: Also Enemy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5458,7 +5458,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.013028145, w: 0.1771555}
+  m_margin: {x: -1.4140625, y: 0, z: 0.013028145, w: 0.1771555}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5803,7 +5803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9069781275429341999, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.885339
+      value: 101.47
       objectReference: {fileID: 0}
     - target: {fileID: 9069781275429341999, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8233,11 +8233,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750698467}
   m_CullTransparentMesh: 1
---- !u!82 &1754546174 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5835560443959800765, guid: e3233bb4e4699464a820e78460e52134, type: 3}
-  m_PrefabInstance: {fileID: 1295443170}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1768894159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10937,8 +10932,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
+      propertyPath: distance_1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: distance_2
-      value: 15
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6231214763138577249, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
       propertyPath: bulletScale
