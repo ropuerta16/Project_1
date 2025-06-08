@@ -70,7 +70,10 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public void Victory_Click()
     {
-        LoadScene("Level_1");
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        { LoadScene("Level_1"); }
+        else if (SceneManager.GetActiveScene().name == "Level_1")
+        { LoadScene("Level_2"); }
     }
 
     public void Option_click()

@@ -4,6 +4,8 @@ public class PotionManager_scrp : MonoBehaviour
 {
     public PlayerManager_Scrp player;
 
+    public AudioSource Heal_Audio;
+
     private void Awake()
     {
         
@@ -18,6 +20,8 @@ public class PotionManager_scrp : MonoBehaviour
         }
 
         player.healthSlider.value = player.Health;
+
+        Heal_Audio.Play();
 
         Destroy(gameObject);
     }

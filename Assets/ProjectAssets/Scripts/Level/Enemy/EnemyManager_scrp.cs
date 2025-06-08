@@ -7,7 +7,6 @@ public class EnemyManager_scrp : MonoBehaviour
     public float MaxCoolDown;
 
     public GameObject bullet;
-    public Transform bulletScale;
 
     private Vector2 rayDistance = new Vector2(-1, 0);
     private Vector2 rayDistance_2 = new Vector2(1, 0);

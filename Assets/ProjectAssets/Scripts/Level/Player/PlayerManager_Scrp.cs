@@ -65,12 +65,10 @@ public class PlayerManager_Scrp : MonoBehaviour
         {
             if (context.performed)
             {
-                //Hold = full height
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpforce);
             }
             else if (context.canceled)
             {
-                //Press = low jump
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             }
             Jump_Audio.Play();

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSwapper_scrp : MonoBehaviour
 {
@@ -12,18 +13,12 @@ public class PlayerSwapper_scrp : MonoBehaviour
 
     private void Awake()
     {
-        //currentScene = LoadingManager_scrp.newScene;
+        currentScene = SceneManager.GetActiveScene().name;
 
-#if UNITY_EDITOR
-        currentScene = "Level_2";
-#endif
-
-        currentScene = "Level_2";
-
-        if (currentScene == "Level_1")
+        if (SceneManager.GetActiveScene().name == "Level_1")
             state = "VP";
 
-        if (currentScene == "Level_2")
+        if (SceneManager.GetActiveScene().name == "Level_2")
             state = "G";
     }
 
@@ -39,14 +34,12 @@ public class PlayerSwapper_scrp : MonoBehaviour
                 Player.SetActive(false);
                 Player_2.SetActive(true);
                 state = "G";
-                Debug.Log(state);
             }
             else if (state == "G")
             {
                 Player.SetActive(true);
                 Player_2.SetActive(false);
                 state = "VP";
-                Debug.Log(state);
             }
         }
         else if (collision.gameObject.CompareTag("Player") && currentScene == "Level_2" )
@@ -56,21 +49,18 @@ public class PlayerSwapper_scrp : MonoBehaviour
                 Player.SetActive(false);
                 Player_2.SetActive(true);
                 state = "G";
-                Debug.Log(state);
             }
             else if (state == "G")
             {
                 Player.SetActive(false);
                 Player_2.SetActive(true);
                 state = "A";
-                Debug.Log(state);
             }
             else if (state == "A")
             {
                 Player.SetActive(true);
                 Player_2.SetActive(false);
                 state = "VP";
-                Debug.Log(state);
             }
 
         }
