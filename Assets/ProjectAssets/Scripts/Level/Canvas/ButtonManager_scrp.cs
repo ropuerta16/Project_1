@@ -48,7 +48,7 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public void Exit_Click()
     {
-        LoadScene("MainMenu");
+        LoadScene("S_MainMenu");
     }
 
     public void Resume_Click()
@@ -60,20 +60,20 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public void Restart_Click()
     {
-        if (SceneManager.GetActiveScene().name == "Tutorial")
-        { LoadScene("Tutorial"); }
-        else if (SceneManager.GetActiveScene().name == "Level_1")
-        { LoadScene("Level_1"); }
-        else if(SceneManager.GetActiveScene().name == "Level_2")
-        { LoadScene("Level_2"); }
+        if (SceneManager.GetActiveScene().name == "S_Tutorial")
+        { LoadScene("S_Tutorial"); }
+        else if (SceneManager.GetActiveScene().name == "S_Level_1")
+        { LoadScene("S_Level_1"); }
+        else if(SceneManager.GetActiveScene().name == "S_Level_2")
+        { LoadScene("S_Level_2"); }
     }
 
     public void Victory_Click()
     {
-        if (SceneManager.GetActiveScene().name == "Tutorial")
-        { LoadScene("Level_1"); }
-        else if (SceneManager.GetActiveScene().name == "Level_1")
-        { LoadScene("Level_2"); }
+        if (SceneManager.GetActiveScene().name == "S_Tutorial")
+        { LoadScene("S_Level_1"); }
+        else if (SceneManager.GetActiveScene().name == "S_Level_1")
+        { LoadScene("S_Level_2"); }
     }
 
     public void Option_click()

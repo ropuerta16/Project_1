@@ -15,10 +15,10 @@ public class PlayerSwapper_scrp : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene().name;
 
-        if (SceneManager.GetActiveScene().name == "Level_1")
+        if (SceneManager.GetActiveScene().name == "S_Level_1")
             state = "VP";
 
-        if (SceneManager.GetActiveScene().name == "Level_2")
+        if (SceneManager.GetActiveScene().name == "S_Level_2")
             state = "G";
     }
 
@@ -27,7 +27,7 @@ public class PlayerSwapper_scrp : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && currentScene == "Level_1")
+        if (collision.gameObject.CompareTag("Player") && currentScene == "S_Level_1")
         {
             if (state == "VP")
             {
@@ -42,7 +42,7 @@ public class PlayerSwapper_scrp : MonoBehaviour
                 state = "VP";
             }
         }
-        else if (collision.gameObject.CompareTag("Player") && currentScene == "Level_2" )
+        else if (collision.gameObject.CompareTag("Player") && currentScene == "S_Level_2" )
         {
             if (state == "VP")
             {

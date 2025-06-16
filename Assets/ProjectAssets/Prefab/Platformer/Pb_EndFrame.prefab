@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5839665334159354027}
   - component: {fileID: 276481395861718967}
   m_Layer: 0
-  m_Name: EndFrame
+  m_Name: Pb_EndFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

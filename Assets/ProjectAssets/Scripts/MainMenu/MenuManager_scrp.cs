@@ -12,7 +12,7 @@ public class MenuManager_scrp : MonoBehaviour
     { Application.Quit(); }
 
     public void Play_Click()
-    { LoadScene("LoadingManager"); LoadingManager_scrp.newScene = "Tutorial"; }
+    { LoadScene("S_LoadingManager"); LoadingManager_scrp.newScene = "S_Tutorial"; }
 
     public void Option_Click()
     { Options_Panel.SetActive(true); Menu_Panel.SetActive(false); }

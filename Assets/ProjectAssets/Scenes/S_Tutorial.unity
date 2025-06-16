@@ -5861,6 +5861,18 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 398799742}
+    - target: {fileID: 1910532770758388070, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: counter
+      value: 
+      objectReference: {fileID: 2123030781}
+    - target: {fileID: 1910532770758388070, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1255885954}
+    - target: {fileID: 1910532770758388070, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: Panel_Reloading
+      value: 
+      objectReference: {fileID: 1877567452}
     - target: {fileID: 3827402683927928341, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5885,6 +5897,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8485454782464292855, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: counter
+      value: 
+      objectReference: {fileID: 2123030781}
+    - target: {fileID: 8485454782464292855, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1255885954}
+    - target: {fileID: 8485454782464292855, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+      propertyPath: Panel_Reloading
+      value: 
+      objectReference: {fileID: 1877567452}
     - target: {fileID: 9069781275429341999, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -5930,6 +5954,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+--- !u!95 &1255885954 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6990316399766939399, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+  m_PrefabInstance: {fileID: 1255885953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1258706606
 GameObject:
   m_ObjectHideFlags: 0
@@ -7213,7 +7242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -319.3, y: 124.79999}
+  m_AnchoredPosition: {x: -319.30002, y: 124.79999}
   m_SizeDelta: {x: -701.39996, y: -350.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556676566
