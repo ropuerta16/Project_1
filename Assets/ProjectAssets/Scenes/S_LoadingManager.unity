@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241295202}
   m_Layer: 5
-  m_Name: Bar
+  m_Name: LoadingBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 1127026226}
   - component: {fileID: 1127026225}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Background_BlackSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1646129628}
   - component: {fileID: 1646129627}
   m_Layer: 5
-  m_Name: Loading_txt
+  m_Name: Loading_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -939,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 867561000627901702, guid: 694478b8776a9ab428d2d830e29077ca, type: 3}
       propertyPath: m_Name
-      value: Elevantor_Background_Audio
+      value: Pb_Elevantor_Background_Audio
       objectReference: {fileID: 0}
     - target: {fileID: 3949245122698672889, guid: 694478b8776a9ab428d2d830e29077ca, type: 3}
       propertyPath: m_Volume

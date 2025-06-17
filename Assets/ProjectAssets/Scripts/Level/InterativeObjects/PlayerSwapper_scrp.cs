@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSwapper_scrp : MonoBehaviour
 {
-    public GameObject Player;
+    public GameObject Player_1;
     public GameObject Player_2;
 
     private string state;
@@ -31,13 +31,13 @@ public class PlayerSwapper_scrp : MonoBehaviour
         {
             if (state == "VP")
             {
-                Player.SetActive(false);
+                Player_1.SetActive(false);
                 Player_2.SetActive(true);
                 state = "G";
             }
             else if (state == "G")
             {
-                Player.SetActive(true);
+                Player_1.SetActive(true);
                 Player_2.SetActive(false);
                 state = "VP";
             }
@@ -46,19 +46,19 @@ public class PlayerSwapper_scrp : MonoBehaviour
         {
             if (state == "VP")
             {
-                Player.SetActive(false);
+                Player_1.SetActive(false);
                 Player_2.SetActive(true);
                 state = "G";
             }
             else if (state == "G")
             {
-                Player.SetActive(false);
+                Player_1.SetActive(false);
                 Player_2.SetActive(true);
                 state = "A";
             }
             else if (state == "A")
             {
-                Player.SetActive(true);
+                Player_1.SetActive(true);
                 Player_2.SetActive(false);
                 state = "VP";
             }

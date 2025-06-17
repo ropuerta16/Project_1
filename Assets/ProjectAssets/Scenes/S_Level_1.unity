@@ -1867,7 +1867,7 @@ GameObject:
   - component: {fileID: 274589192}
   - component: {fileID: 274589193}
   m_Layer: 0
-  m_Name: GrassSlicedTexture_Background
+  m_Name: Grass_Background_Bott
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2367,7 +2367,7 @@ GameObject:
   - component: {fileID: 485645968}
   - component: {fileID: 485645967}
   m_Layer: 0
-  m_Name: WallChange1
+  m_Name: WallChange_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2400,8 +2400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c877ca9513eeef24c876313a22b63534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  Player_2: {fileID: 0}
+  Player_1: {fileID: 0}
+  Player_2: {fileID: 5294281564683162930}
 --- !u!61 &485645968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3354,7 +3354,7 @@ GameObject:
   - component: {fileID: 593197407}
   - component: {fileID: 593197408}
   m_Layer: 0
-  m_Name: WallChange
+  m_Name: WallChange_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3488,8 +3488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c877ca9513eeef24c876313a22b63534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  Player_2: {fileID: 0}
+  Player_1: {fileID: 0}
+  Player_2: {fileID: 5294281564683162930}
 --- !u!4 &620222093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 879949899590454090, guid: 5e2f502c7a9eb524b893a5f5aab2a6b5, type: 3}
@@ -28691,7 +28691,7 @@ GameObject:
   - component: {fileID: 811386179}
   - component: {fileID: 811386180}
   m_Layer: 0
-  m_Name: GrassTexture_Background
+  m_Name: Grass_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29213,7 +29213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -319.3, y: 124.79999}
+  m_AnchoredPosition: {x: -319.30002, y: 124.79999}
   m_SizeDelta: {x: -701.39996, y: -350.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893509566
@@ -35346,6 +35346,11 @@ MonoBehaviour:
 --- !u!95 &5294281564683162929 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6990316399766939399, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
+  m_PrefabInstance: {fileID: 5294281564683162925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5294281564683162930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5739298966964726208, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
   m_PrefabInstance: {fileID: 5294281564683162925}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
