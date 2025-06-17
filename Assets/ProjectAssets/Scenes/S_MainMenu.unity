@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Options_Panel: {fileID: 76067847}
   Menu_Panel: {fileID: 136899745}
-  MusicAudio: {fileID: 0}
+  MusicAudio: {fileID: 1536969946}
 --- !u!1 &1008544815
 GameObject:
   m_ObjectHideFlags: 0
