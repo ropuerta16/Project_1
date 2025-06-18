@@ -473,7 +473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe97809dc85747e4385d38d6d726ea8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 102334952}
 --- !u!1001 &77975040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,9 +839,6 @@ MonoBehaviour:
   Pause_Button: {fileID: 670159287}
   Victory_Panel: {fileID: 148087836}
   Panel_GameOver: {fileID: 1619538078}
-  Background_Audio: {fileID: 871265337}
-  GameOver_Audio: {fileID: 1782855189}
-  Victory_Audio: {fileID: 137276467}
 --- !u!114 &102334953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,7 +1589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe97809dc85747e4385d38d6d726ea8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 102334952}
 --- !u!61 &196657382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2888,8 +2883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce61836311608948a6e67270fcbcd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 519420032}
-  CamFollower: {fileID: 1199877700}
+  camera: {fileID: 0}
+  camFollower: {fileID: 0}
   speed: 0.07
 --- !u!1 &525528498
 GameObject:
@@ -28553,7 +28548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe97809dc85747e4385d38d6d726ea8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 102334952}
 --- !u!61 &710230754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29213,7 +29207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -319.30002, y: 124.79999}
+  m_AnchoredPosition: {x: -319.3, y: 124.79999}
   m_SizeDelta: {x: -701.39996, y: -350.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893509566
@@ -29463,7 +29457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe97809dc85747e4385d38d6d726ea8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 102334952}
 --- !u!61 &982660434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30545,11 +30538,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5620ed0b8ba76814ba719c31f25f3839, type: 3}
---- !u!4 &1199877700 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2204302382517191804, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
-  m_PrefabInstance: {fileID: 5294281564683162925}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1231843572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31051,13 +31039,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0150532ebd950ac41bb9274710de91d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriterenderer: {fileID: 1016582945}
+  spriteRenderer: {fileID: 0}
   newSprite: {fileID: 21300000, guid: 09bec40cf3971dc47a713c99b6801aee, type: 3}
   oldSprite: {fileID: 21300000, guid: e79edeb313633ec4fb58c302175a3fe6, type: 3}
   FXSlider: {fileID: 2003847146}
   MusicSlider: {fileID: 926684396}
   ButtonAudio: {fileID: 829540388}
   BackgroundAudio: {fileID: 871265337}
+  GameOver_Audio: {fileID: 1782855189}
+  Victory_Audio: {fileID: 137276467}
+  bullet_Audio: {fileID: 320277208}
+  Jump_Audio: {fileID: 1931113669}
+  Heal_Audio: {fileID: 1604170368}
   FxAudio: {fileID: 1294243697}
 --- !u!222 &1354573524
 CanvasRenderer:
@@ -31135,7 +31128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe97809dc85747e4385d38d6d726ea8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 102334952}
 --- !u!61 &1361099388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31239,7 +31231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2459961163305036784, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
+  m_Sprite: {fileID: -309675015, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34718,7 +34710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2750298860172458669, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
+  m_Sprite: {fileID: -1184217773, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -178,17 +178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7828dced756fc41ae753c85d858d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  MaxCoolDown: 3
+  maxHealth: 100
+  maxCoolDown: 3
   bullet: {fileID: 2995952195955578681, guid: afcd7bbb8d2bbb0448619921bd57c932, type: 3}
   distance_1: 15
   distance_2: -15
   raypos: {fileID: 5016383109359784482}
   raypos_2: {fileID: 6018342081475586607}
   animator: {fileID: 2963899470722816047}
-  bullet_Audio: {fileID: 8181232652407193548, guid: 8e9faae6544e38444aac4909788fcee5, type: 3}
-  coll2D: {fileID: 223289733503391128}
-  rb: {fileID: 1802020972247662855}
 --- !u!95 &2963899470722816047
 Animator:
   serializedVersion: 7

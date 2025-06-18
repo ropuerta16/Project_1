@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
-
-public class PlayerShooting_Scrp : MonoBehaviour
+public class PlayerShooting : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject bulletSpawner;
@@ -15,13 +14,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
 
     public Animator animator;
 
-    public TMP_Text counter;
-
     public Rigidbody2D player;
-
-    public AudioSource bullet_Audio;
-
-    public GameObject Panel_Reloading;
 
     void Awake()
     {
@@ -35,12 +28,12 @@ public class PlayerShooting_Scrp : MonoBehaviour
         if (currentBullet <= 0)
         { coolDownReload -= Time.deltaTime; }
 
-        counter.text = currentBullet.ToString();
-
+        HUDManager.instance.counter.text = currentBullet.ToString();
+        
 
         if (coolDownReload <= 0)
         {
-            Panel_Reloading.SetActive(false);
+            HUDManager.instance.Panel_Reloading.SetActive(false);
             currentBullet = maxBullet;
             coolDownReload = 2f;
         }
@@ -58,19 +51,19 @@ public class PlayerShooting_Scrp : MonoBehaviour
 
             if (player.linearVelocity.x < 0)
             {
-                bullet_Audio.Play();
+                SoundManager.instance.bullet_Audio.Play();
 
                 GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+                BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
 
                 BulletMovementComp.movementDirection = new Vector3(-1, 0, 0);
             }
             else
             {
-                bullet_Audio.Play();
+                SoundManager.instance.bullet_Audio.Play();
 
                 GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+                BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
 
                 BulletMovementComp.movementDirection = new Vector3(1, 0, 0);
             }
@@ -80,7 +73,7 @@ public class PlayerShooting_Scrp : MonoBehaviour
         }
         else if (currentBullet <= 0)
         {
-            Panel_Reloading.SetActive(true);
+            HUDManager.instance.Panel_Reloading.SetActive(true);
         }
     }
 }

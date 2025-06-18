@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class BasicEnemy_scrp : MonoBehaviour
+public class BasicEnemy : MonoBehaviour
 {
-    public float Health;
+    public float maxHealth;
 
     private void Update()
     {
-        if (Health <= 0)
+        if (maxHealth <= 0)
         { Destroy(gameObject); }
-        Debug.Log(Health);
+        Debug.Log(maxHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        { Health -= 50; Destroy(collision.gameObject); }
+        { maxHealth -= 50; Destroy(collision.gameObject); }
     }
 }

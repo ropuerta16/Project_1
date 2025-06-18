@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class EnemyManager_scrp : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
-    public float health;
+    public float maxHealth;
     private float coolDown;
-    public float MaxCoolDown;
+    public float maxCoolDown;
 
     public GameObject bullet;
 
@@ -17,11 +17,9 @@ public class EnemyManager_scrp : MonoBehaviour
 
     public Animator animator;
 
-    public AudioSource bullet_Audio;
-
     private void Awake()
     {
-        coolDown = MaxCoolDown;
+        coolDown = maxCoolDown;
     }
     private void Update()
     {
@@ -41,14 +39,14 @@ public class EnemyManager_scrp : MonoBehaviour
             {
                 animator.SetTrigger("isAttacking_Enemy");
                 
-                bullet_Audio.Play();
+                SoundManager.instance.bullet_Audio.Play();
 
                 GameObject Bullet = Instantiate(bullet, raypos.transform.position, raypos.transform.rotation);
-                BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+                BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
 
                 BulletMovementComp.movementDirection = new Vector3(-1,0,0);
                 
-                coolDown = MaxCoolDown;
+                coolDown = maxCoolDown;
             }
         }
 
@@ -58,14 +56,14 @@ public class EnemyManager_scrp : MonoBehaviour
             {
                 animator.SetTrigger("isAttacking_Enemy");
 
-                bullet_Audio.Play();
+                SoundManager.instance.bullet_Audio.Play();
 
                 GameObject Bullet = Instantiate(bullet, raypos_2.transform.position, raypos_2.transform.rotation);
-                BulletManager_scrp BulletMovementComp = Bullet.GetComponent<BulletManager_scrp>();
+                BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
 
                 BulletMovementComp.movementDirection = new Vector3(1,0,0);
 
-                coolDown = MaxCoolDown;
+                coolDown = maxCoolDown;
             }
         }
     }
@@ -74,10 +72,10 @@ public class EnemyManager_scrp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         { 
-            health -= 50; 
+            maxHealth -= 50; 
             Destroy(collision.gameObject);
 
-            if (health <= 0)
+            if (maxHealth <= 0)
             {
                 animator.SetTrigger("isDead_Enemy");
             }

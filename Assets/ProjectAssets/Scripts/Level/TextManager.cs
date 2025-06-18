@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Collections;
-public class TextManager_scrp : MonoBehaviour
+public class TextManager : MonoBehaviour
 {
-    public GameObject Welcome;
-    public GameObject Problem;
-    public GameObject KeyAD;
+    public GameObject welcome;
+    public GameObject problem;
+    public GameObject keyAD;
     void Start()
     {
         StartCoroutine(ExecuteAfterDelay(3f)); 
@@ -13,11 +13,11 @@ public class TextManager_scrp : MonoBehaviour
     IEnumerator ExecuteAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        Welcome.SetActive(false);
-        Problem.SetActive(true);
+        welcome.SetActive(false);
+        problem.SetActive(true);
         yield return new WaitForSeconds(delay);
-        Problem.SetActive(false);
-        KeyAD.SetActive(true);
+        problem.SetActive(false);
+        keyAD.SetActive(true);
     }
 
 }

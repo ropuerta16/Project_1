@@ -122,14 +122,12 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  Panel_Menu: {fileID: 0}
   GameOver: {fileID: 0}
   Health: 100
   MaxHealth: 100
   animator: {fileID: 6990316399766939399}
   player: {fileID: 9069781275429341999}
   healthSlider: {fileID: 0}
-  Jump_Audio: {fileID: 5714939518700639461, guid: 9991389e25b280c4f9c44cdc975fbb61, type: 3}
 --- !u!114 &1177171947008027504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +463,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7844210485570560352}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6990316399766939399}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: bullet_Audio
       value: 
       objectReference: {fileID: 1188806054922042848, guid: f2028f6405bb1484bbe6b68a269f48a9, type: 3}
@@ -584,6 +586,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7844210485570560352}
+    - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6990316399766939399}
     - target: {fileID: 5240364722768763532, guid: a3523a98c8e1123459a04f17c501c163, type: 3}
       propertyPath: bullet_Audio
       value: 

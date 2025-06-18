@@ -1,13 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CheckDeathFall_scrp : MonoBehaviour
+public class VictoryCheck : MonoBehaviour
 {
-    public ButtonManager_scrp Manager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Manager.GameOver();
+            HUDManager.instance.Victory();
         }
+
     }
 }

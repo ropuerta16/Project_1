@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerSwapper_scrp : MonoBehaviour
+public class PlayerSwapper : MonoBehaviour
 {
     public GameObject Player_1;
     public GameObject Player_2;

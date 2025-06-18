@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SafeNet_Tutorial_2_scrp : MonoBehaviour
+public class SafeNet_Tutorial_2 : MonoBehaviour
 {
     public Transform Players;
     public GameObject SaveTxt;

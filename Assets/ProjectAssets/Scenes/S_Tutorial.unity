@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2459961163305036784, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
+  m_Sprite: {fileID: -309675015, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2750298860172458669, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
+  m_Sprite: {fileID: -1184217773, guid: 2c275dd959ec92643b472b3c2e34dace, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2765,7 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092b0871050f028478815bf73bcf6f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  maxHealth: 0
 --- !u!1001 &686866612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3430,9 +3430,6 @@ MonoBehaviour:
   Pause_Button: {fileID: 981368749}
   Victory_Panel: {fileID: 724488165}
   Panel_GameOver: {fileID: 964731248}
-  Background_Audio: {fileID: 1295443172}
-  GameOver_Audio: {fileID: 4369605107332017592}
-  Victory_Audio: {fileID: 8739702867089518954}
 --- !u!114 &894497081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4910,13 +4907,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0150532ebd950ac41bb9274710de91d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriterenderer: {fileID: 1427878608}
+  spriteRenderer: {fileID: 0}
   newSprite: {fileID: 21300000, guid: 09bec40cf3971dc47a713c99b6801aee, type: 3}
   oldSprite: {fileID: 21300000, guid: e79edeb313633ec4fb58c302175a3fe6, type: 3}
   FXSlider: {fileID: 1715873065}
   MusicSlider: {fileID: 1792683757}
   ButtonAudio: {fileID: 1768894161}
   BackgroundAudio: {fileID: 1295443172}
+  GameOver_Audio: {fileID: 4369605107332017592}
+  Victory_Audio: {fileID: 8739702867089518954}
+  bullet_Audio: {fileID: 1768894161}
+  Jump_Audio: {fileID: 1865078381}
+  Heal_Audio: {fileID: 7763971353514281339}
   FxAudio: {fileID: 1910833905}
 --- !u!222 &1064829273
 CanvasRenderer:
@@ -5899,9 +5901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d029e890c30e6e44991049f05e785eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Welcome: {fileID: 1967708097}
-  Problem: {fileID: 2088305299}
-  KeyAD: {fileID: 1347953525}
+  welcome: {fileID: 0}
+  problem: {fileID: 0}
+  keyAD: {fileID: 0}
 --- !u!1001 &1295443170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5968,11 +5970,6 @@ Transform:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5835560443959800765, guid: e3233bb4e4699464a820e78460e52134, type: 3}
   m_PrefabInstance: {fileID: 1295443170}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1303417206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2204302382517191804, guid: 2716d03d16c06604d9e667048b2523a5, type: 3}
-  m_PrefabInstance: {fileID: 1255885953}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1325371748
 GameObject:
@@ -7001,7 +6998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6e7e52ca967e04ea78f95c77ddabd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 530116019}
+  player: {fileID: 0}
 --- !u!61 &1608767476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7223,8 +7220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce61836311608948a6e67270fcbcd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 1691656884}
-  CamFollower: {fileID: 1303417206}
+  camera: {fileID: 0}
+  camFollower: {fileID: 0}
   speed: 0.07
 --- !u!1 &1697630247
 GameObject:

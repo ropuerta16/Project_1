@@ -3,23 +3,19 @@ using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 
-public class PlayerManager_Scrp : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public float speed = 5f;
     public Rigidbody2D rb;
     public float jumpforce = 10f;
-    float HorizontalMovement;
+    float horizontalMovement;
     public Transform groundCheckPos;
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.5f);
     public LayerMask groundLayer;
 
-    public GameObject Panel_Menu;
-
     private Collider2D currentGroundCollider2D;
 
     private bool ActivePanel;
-
-    public ButtonManager_scrp GameOver;
 
     public float Health;
     public float MaxHealth = 100f;
@@ -30,8 +26,6 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     public Slider healthSlider;
 
-    public AudioSource Jump_Audio;
-
     void Awake()
     {
         Health = MaxHealth;
@@ -41,7 +35,7 @@ public class PlayerManager_Scrp : MonoBehaviour
     }
     void Update()
     {
-        rb.linearVelocity = new Vector2(HorizontalMovement * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
 
         animator.SetFloat("XVelocity", Mathf.Abs(rb.linearVelocity.x));
         animator.SetFloat("YVelocity", rb.linearVelocity.y);
@@ -56,7 +50,7 @@ public class PlayerManager_Scrp : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        HorizontalMovement = context.ReadValue<Vector2>().x;
+        horizontalMovement = context.ReadValue<Vector2>().x;
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -71,7 +65,7 @@ public class PlayerManager_Scrp : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             }
-            Jump_Audio.Play();
+            SoundManager.instance.Jump_Audio.Play();
             animator.SetBool("isJumping", true);
         }
         else
@@ -84,13 +78,13 @@ public class PlayerManager_Scrp : MonoBehaviour
     {
         if (!ActivePanel)
         {
-            Panel_Menu.SetActive(true);
+            HUDManager.instance.Panel_Menu.SetActive(true);
             Time.timeScale = 0;
             ActivePanel = true;
         }
         else if (ActivePanel)
         {
-            Panel_Menu.SetActive(false);
+            HUDManager.instance.Panel_Menu.SetActive(false);
             Time.timeScale = 1;
             ActivePanel = false;
         }
@@ -130,7 +124,7 @@ public class PlayerManager_Scrp : MonoBehaviour
         healthSlider.value = Health;
 
         if (Health <= 0)
-        { GameOver.GameOver(); }
+        { HUDManager.instance.GameOver(); }
 
     }
 

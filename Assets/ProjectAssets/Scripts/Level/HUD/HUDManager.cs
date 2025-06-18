@@ -1,30 +1,41 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager_scrp : MonoBehaviour
+public class HUDManager : MonoBehaviour
 {
+    public static HUDManager instance {  get; private set; }
+
     public GameObject Panel_Menu;
     public GameObject Panel_Options;
     public GameObject Pause_Button;
-    public GameObject Victory_Panel;
-
+    public GameObject Panel_Victory;
+    public GameObject Panel_Reloading;
     public GameObject Panel_GameOver;
 
-    public AudioSource Background_Audio;
-    public AudioSource GameOver_Audio;
-    public AudioSource Victory_Audio;
+    public TMP_Text counter;
 
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    private void Awake()
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Start()
     {
         Time.timeScale = 1;
     }
-
     public void GameOver()
     {
-        Background_Audio.Stop();
-        GameOver_Audio.Play();
+        SoundManager.instance.BackgroundAudio.Stop();
+        SoundManager.instance.GameOver_Audio.Play();
         Panel_GameOver.SetActive(true);
         Pause_Button.SetActive(false);
         Time.timeScale = 0;
@@ -32,9 +43,9 @@ public class ButtonManager_scrp : MonoBehaviour
 
     public void Victory()
     {
-        Background_Audio.Stop();
-        Victory_Audio.Play();
-        Victory_Panel.SetActive(true);
+        SoundManager.instance.BackgroundAudio.Stop();
+        SoundManager.instance.Victory_Audio.Play();
+        Panel_Victory.SetActive(true);
         Pause_Button.SetActive(false);
         Time.timeScale = 0;
     }
@@ -64,7 +75,7 @@ public class ButtonManager_scrp : MonoBehaviour
         { LoadScene("S_Tutorial"); }
         else if (SceneManager.GetActiveScene().name == "S_Level_1")
         { LoadScene("S_Level_1"); }
-        else if(SceneManager.GetActiveScene().name == "S_Level_2")
+        else if (SceneManager.GetActiveScene().name == "S_Level_2")
         { LoadScene("S_Level_2"); }
     }
 
