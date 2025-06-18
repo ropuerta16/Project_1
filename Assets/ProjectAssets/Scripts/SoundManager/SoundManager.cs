@@ -25,8 +25,8 @@ public class SoundManager : MonoBehaviour
 
     public GameObject FxAudio;
 
-    public static float FXSliderValue;
-    public static float MusicSliderValue;
+    public float FXSliderValue;
+    public float MusicSliderValue;
 
     void Awake()
     {

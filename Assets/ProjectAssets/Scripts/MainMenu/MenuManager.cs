@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     { Application.Quit(); }
 
     public void Play_Click()
-    { LoadScene("S_LoadingManager"); LoadingManager.newScene = "S_Tutorial"; }
+    { LoadScene("S_LoadingManager"); LoadingManager.instance.newScene = "S_Tutorial"; }
 
     public void Option_Click()
     { Panel_Options.SetActive(true); Panel_Menu.SetActive(false); }

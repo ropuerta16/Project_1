@@ -4,7 +4,23 @@ using System.Collections;
 
 public class LoadingManager : MonoBehaviour
 {
-    public static string newScene;
+    public static LoadingManager instance { get; private set; }
+
+    public string newScene;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+
     void Start()
     {
 
