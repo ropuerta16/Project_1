@@ -36,13 +36,11 @@ public class PlayerManager : MonoBehaviour
 
         animator.SetFloat("XVelocity", Mathf.Abs(rb.linearVelocity.x));
         animator.SetFloat("YVelocity", rb.linearVelocity.y);
-        
+
         if (rb.linearVelocity.x < 0)
         { player.localScale = new Vector3(-1, 1, 1); }
         else
         { player.localScale = new Vector3(1, 1, 1); }
-
-
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -71,9 +69,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    
-
-
     private bool isGrounded()
     {
         Collider2D GroundCollider = Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer);
@@ -96,19 +91,24 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BulletEnemy") )
         {
-            Health -= 10; 
+            RecieveDamage(10);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
-            Health -= 20;
+            RecieveDamage(20);
         }
+    }
+
+
+    private void RecieveDamage(int damage)
+    {
+        Health -= damage;
 
         healthSlider.value = Health;
 
         if (Health <= 0)
         { HUDManager.instance.GameOver(); }
-
     }
 
 }

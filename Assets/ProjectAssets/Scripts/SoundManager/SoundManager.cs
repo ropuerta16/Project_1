@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("hey");
         if (instance != null)
         {
             Destroy(gameObject);

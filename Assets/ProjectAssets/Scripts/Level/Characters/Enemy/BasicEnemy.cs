@@ -14,6 +14,11 @@ public class BasicEnemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        { maxHealth -= 50; Destroy(collision.gameObject); }
+        { RecieveDamage(50); Destroy(collision.gameObject); }
+    }
+
+    private void RecieveDamage(int damage)
+    {
+        maxHealth -= damage;
     }
 }

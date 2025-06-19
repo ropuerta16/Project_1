@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class CamFollower : MonoBehaviour
 {
-    public Transform camera;
     public Transform camFollower;
-    public float speed = 0.07f;
+    public float speed;
     private float startTime;
     private float dist;
 
@@ -13,7 +12,7 @@ public class CamFollower : MonoBehaviour
     {
         startTime = Time.time;
 
-        dist = Vector3.Distance(camera.position, camFollower.position);
+        dist = Vector3.Distance(transform.position, camFollower.position);
 
         z = transform.position.z;
     }
@@ -22,7 +21,7 @@ public class CamFollower : MonoBehaviour
         float distCovered = (Time.time - startTime) * speed;
 
         float fractionOfJourney = distCovered / dist;
-        Vector3 newPosition = Vector3.Lerp(camera.position, camFollower.position, fractionOfJourney);
+        Vector3 newPosition = Vector3.Lerp(transform.position, camFollower.position, fractionOfJourney);
         newPosition.z = z;
 
         transform.position = newPosition;

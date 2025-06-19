@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletManager : MonoBehaviour
 {
     public Vector3 movementDirection = Vector3.zero;
-    public float speed = 25f;
+    public float speed;
     void Update()
     {
         transform.position += movementDirection.normalized * speed * Time.deltaTime;

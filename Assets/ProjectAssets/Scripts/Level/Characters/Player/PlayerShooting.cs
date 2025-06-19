@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using System;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -49,24 +50,19 @@ public class PlayerShooting : MonoBehaviour
         {
             animator.SetTrigger("isAttacking");
 
+            GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+            BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
+
             if (player.linearVelocity.x < 0)
             {
-                SoundManager.instance.bullet_Audio.Play();
-
-                GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
-
                 BulletMovementComp.movementDirection = new Vector3(-1, 0, 0);
             }
             else
             {
-                SoundManager.instance.bullet_Audio.Play();
-
-                GameObject Bullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                BulletManager BulletMovementComp = Bullet.GetComponent<BulletManager>();
-
                 BulletMovementComp.movementDirection = new Vector3(1, 0, 0);
             }
+
+            SoundManager.instance.bullet_Audio.Play();
 
             coolDownShot = maxTimeCoolDown;
             currentBullet--;
