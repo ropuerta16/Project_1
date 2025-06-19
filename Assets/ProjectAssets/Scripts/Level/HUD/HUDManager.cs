@@ -16,6 +16,8 @@ public class HUDManager : MonoBehaviour
 
     public TMP_Text counter;
 
+    private bool ActivePanel;
+
     void Awake()
     {
         if (instance != null)
@@ -30,8 +32,26 @@ public class HUDManager : MonoBehaviour
 
     void Start()
     {
+        ActivePanel = false;
         Time.timeScale = 1;
     }
+
+    public void Esc(InputAction.CallbackContext context)
+    {
+        if (!ActivePanel)
+        {
+            HUDManager.instance.Panel_Menu.SetActive(true);
+            Time.timeScale = 0;
+            ActivePanel = true;
+        }
+        else if (ActivePanel)
+        {
+            HUDManager.instance.Panel_Menu.SetActive(false);
+            Time.timeScale = 1;
+            ActivePanel = false;
+        }
+    }
+
     public void GameOver()
     {
         SoundManager.instance.BackgroundAudio.Stop();

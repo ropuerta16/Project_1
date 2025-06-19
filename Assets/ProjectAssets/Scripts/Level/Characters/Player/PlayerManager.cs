@@ -15,8 +15,6 @@ public class PlayerManager : MonoBehaviour
 
     private Collider2D currentGroundCollider2D;
 
-    private bool ActivePanel;
-
     public float Health;
     public float MaxHealth = 100f;
 
@@ -29,7 +27,6 @@ public class PlayerManager : MonoBehaviour
     void Awake()
     {
         Health = MaxHealth;
-        ActivePanel = false;
         healthSlider.maxValue = MaxHealth;
         healthSlider.value = Health;
     }
@@ -74,21 +71,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void Esc(InputAction.CallbackContext context)
-    {
-        if (!ActivePanel)
-        {
-            HUDManager.instance.Panel_Menu.SetActive(true);
-            Time.timeScale = 0;
-            ActivePanel = true;
-        }
-        else if (ActivePanel)
-        {
-            HUDManager.instance.Panel_Menu.SetActive(false);
-            Time.timeScale = 1;
-            ActivePanel = false;
-        }
-    }
+    
 
 
     private bool isGrounded()

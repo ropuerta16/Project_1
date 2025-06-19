@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,9 +26,6 @@ public class SoundManager : MonoBehaviour
 
     public GameObject FxAudio;
 
-    public float FXSliderValue;
-    public float MusicSliderValue;
-
     void Awake()
     {
         if (instance != null)
@@ -50,8 +48,6 @@ public class SoundManager : MonoBehaviour
             BackgroundAudio.volume = MusicSlider.value;
             ButtonAudio.volume = FXSlider.value;
         }
-        MusicSliderValue = MusicSlider.value;
-        FXSliderValue = FXSlider.value;
     }
 
     public void MuteClick()
