@@ -25,6 +25,5 @@ public class CamFollower : MonoBehaviour
         newPosition.z = z;
 
         transform.position = newPosition;
-
     }
 }
