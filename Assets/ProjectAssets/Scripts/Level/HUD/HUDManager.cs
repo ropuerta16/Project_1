@@ -95,19 +95,19 @@ public class HUDManager : MonoBehaviour
     public void Restart_Click()
     {
         if (SceneManager.GetActiveScene().name == "S_Tutorial")
-        { LoadS("S_Tutorial"); Destroy(gameObject); }
+        { LoadS("S_Tutorial"); Destroy(SoundManager.instance.gameObject); Destroy(gameObject); }
         else if (SceneManager.GetActiveScene().name == "S_Level_1")
-        { LoadS("S_Level_1"); Destroy(gameObject); }
+        { LoadS("S_Level_1"); Destroy(SoundManager.instance.gameObject); Destroy(gameObject); }
         else if (SceneManager.GetActiveScene().name == "S_Level_2")
-        { LoadS("S_Level_2"); Destroy(gameObject); }
+        { LoadS("S_Level_2"); Destroy(SoundManager.instance.gameObject); Destroy(gameObject); }
     }
 
     public void Victory_Click()
     {
         if (SceneManager.GetActiveScene().name == "S_Tutorial")
-        { LoadS("S_Level_1"); Destroy(gameObject); }
+        { LoadS("S_Level_1"); Destroy(SoundManager.instance.gameObject); Destroy(gameObject); }
         else if (SceneManager.GetActiveScene().name == "S_Level_1")
-        { LoadS("S_Level_2"); Destroy(gameObject); }
+        { LoadS("S_Level_2"); Destroy(SoundManager.instance.gameObject); Destroy(gameObject); }
     }
 
     public void Option_click()
