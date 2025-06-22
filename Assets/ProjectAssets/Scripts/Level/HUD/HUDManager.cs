@@ -40,13 +40,15 @@ public class HUDManager : MonoBehaviour
     {
         if (!ActivePanel)
         {
-            HUDManager.instance.Panel_Menu.SetActive(true);
+            Panel_Menu.SetActive(true);
+            Pause_Button.SetActive(false);
             Time.timeScale = 0;
             ActivePanel = true;
         }
         else if (ActivePanel)
         {
-            HUDManager.instance.Panel_Menu.SetActive(false);
+            Panel_Menu.SetActive(false);
+            Pause_Button.SetActive(true);
             Time.timeScale = 1;
             ActivePanel = false;
         }
@@ -54,7 +56,7 @@ public class HUDManager : MonoBehaviour
 
     public void GameOver()
     {
-        SoundManager.instance.BackgroundAudio.Stop();
+        SoundManager.instance.Actual_Background_Audio.Stop();
         SoundManager.instance.GameOver_Audio.Play();
         Panel_GameOver.SetActive(true);
         Pause_Button.SetActive(false);
@@ -63,7 +65,7 @@ public class HUDManager : MonoBehaviour
 
     public void Victory()
     {
-        SoundManager.instance.BackgroundAudio.Stop();
+        SoundManager.instance.Actual_Background_Audio.Stop();
         SoundManager.instance.Victory_Audio.Play();
         Panel_Victory.SetActive(true);
         Pause_Button.SetActive(false);
@@ -79,7 +81,8 @@ public class HUDManager : MonoBehaviour
 
     public void Exit_Click()
     {
-        LoadScene("S_MainMenu");
+        LoadS("S_MainMenu");
+        Destroy(gameObject);
     }
 
     public void Resume_Click()
@@ -92,19 +95,19 @@ public class HUDManager : MonoBehaviour
     public void Restart_Click()
     {
         if (SceneManager.GetActiveScene().name == "S_Tutorial")
-        { LoadScene("S_Tutorial"); }
+        { LoadS("S_Tutorial"); Destroy(gameObject); }
         else if (SceneManager.GetActiveScene().name == "S_Level_1")
-        { LoadScene("S_Level_1"); }
+        { LoadS("S_Level_1"); Destroy(gameObject); }
         else if (SceneManager.GetActiveScene().name == "S_Level_2")
-        { LoadScene("S_Level_2"); }
+        { LoadS("S_Level_2"); Destroy(gameObject); }
     }
 
     public void Victory_Click()
     {
         if (SceneManager.GetActiveScene().name == "S_Tutorial")
-        { LoadScene("S_Level_1"); }
+        { LoadS("S_Level_1"); Destroy(gameObject); }
         else if (SceneManager.GetActiveScene().name == "S_Level_1")
-        { LoadScene("S_Level_2"); }
+        { LoadS("S_Level_2"); Destroy(gameObject); }
     }
 
     public void Option_click()
@@ -112,7 +115,7 @@ public class HUDManager : MonoBehaviour
     public void Back_Click()
     { Panel_Options.SetActive(false); Panel_Menu.SetActive(true); }
 
-    public void LoadScene(string sceneName)
+    public void LoadS(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }

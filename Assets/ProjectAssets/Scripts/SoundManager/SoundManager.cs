@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
@@ -15,8 +16,8 @@ public class SoundManager : MonoBehaviour
     public Slider FXSlider;
     public Slider MusicSlider;
 
-    public AudioSource ButtonAudio;
-    public AudioSource BackgroundAudio;
+    public AudioSource Button_Audio;
+    public AudioSource Actual_Background_Audio;
     public AudioSource GameOver_Audio;
     public AudioSource Victory_Audio;
     public AudioSource bullet_Audio;
@@ -27,7 +28,6 @@ public class SoundManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("hey");
         if (instance != null)
         {
             Destroy(gameObject);
@@ -43,18 +43,22 @@ public class SoundManager : MonoBehaviour
     }
     void Update()
     {
+       
         if (isUnMute)
         {
-            BackgroundAudio.volume = MusicSlider.value;
-            ButtonAudio.volume = FXSlider.value;
+            if (MusicSlider != null && FXSlider != null)
+            {
+                Actual_Background_Audio.volume = MusicSlider.value;
+                Button_Audio.volume = FXSlider.value;
+            }
         }
     }
 
     public void MuteClick()
     {
-        if (!isUnMute)
-        { FxAudio.SetActive(true); BackgroundAudio.volume = 1.0f; spriteRenderer.sprite = newSprite; isUnMute = true; }
+        if (!isUnMute && spriteRenderer != null)
+        { FxAudio.SetActive(true); Actual_Background_Audio.volume = 1.0f; spriteRenderer.sprite = newSprite; isUnMute = true; }
         else
-        { FxAudio.SetActive(false); BackgroundAudio.volume = 0.0f; spriteRenderer.sprite = oldSprite; isUnMute = false; }
+        { FxAudio.SetActive(false); Actual_Background_Audio.volume = 0.0f; spriteRenderer.sprite = oldSprite; isUnMute = false; }
     }
 }
